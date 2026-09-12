@@ -299,7 +299,7 @@ def api_config():
 
     if gemini_key:
         active_mode = "LIVE_GEMINI"
-        mode_desc = "Gemini 1.5 Pro (Live Vision API)"
+        mode_desc = "Gemini 1.5 Flash (Live Vision API)"
     elif openai_key:
         active_mode = "LIVE_OPENAI"
         mode_desc = "OpenAI GPT-4o (Live Vision API)"
@@ -322,27 +322,40 @@ def api_config():
 
 @app.route("/api/test-key", methods=["POST"])
 def api_test_key():
-    data = request.get_json() or {}
+    data = request.get_json(silent=True) or request.form.to_dict() or {}
     provider = data.get("provider", "gemini").lower()
-    key = data.get("key", "").strip(' "\'\r\n\t')
+    key = str(data.get("key") or "").strip(' "\'\r\n\t')
 
     if not key:
         env_key = os.environ.get("GEMINI_API_KEY") if provider == "gemini" else os.environ.get("OPENAI_API_KEY")
-        key = (env_key or "").strip(' "\'\r\n\t')
+        key = str(env_key or "").strip(' "\'\r\n\t')
+
+    if key.lower().startswith("bearer "):
+        key = key[7:].strip()
 
     if not key:
         return jsonify({"success": False, "message": "No API key provided. Please enter a key in the input field."})
 
     try:
         if provider == "gemini":
+            os.environ.setdefault("GRPC_VERBOSITY", "ERROR")
+            os.environ.setdefault("GLOG_minloglevel", "2")
             import google.generativeai as genai
             genai.configure(api_key=key, transport="rest")
-            model = genai.GenerativeModel("gemini-1.5-flash")
-            # Minimal token count ping to test authentication
-            count_res = model.count_tokens("Ping test connection.")
+            
+            # List models to verify authentication without model-name or count_tokens 404 errors
+            available = []
+            for m in genai.list_models():
+                methods = getattr(m, "supported_generation_methods", [])
+                if "generateContent" in methods:
+                    available.append(m.name.replace("models/", ""))
+                if len(available) >= 3:
+                    break
+            
+            model_info = ", ".join(available[:3]) if available else "Gemini models accessible"
             return jsonify({
                 "success": True,
-                "message": f"Successfully authenticated with Gemini API! (Connection verified, token count: {count_res.total_tokens})"
+                "message": f"Successfully authenticated with Gemini API! (Available models: {model_info})"
             })
         elif provider == "openai":
             from openai import OpenAI

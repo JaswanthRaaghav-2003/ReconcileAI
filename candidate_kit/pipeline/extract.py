@@ -128,13 +128,30 @@ def call_vision_llm(image_bytes: bytes) -> Dict[str, Any]:
     # Check for Gemini API key
     gemini_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if gemini_key:
+        os.environ.setdefault("GRPC_VERBOSITY", "ERROR")
+        os.environ.setdefault("GLOG_minloglevel", "2")
         import google.generativeai as genai
         from PIL import Image
         import io
         genai.configure(api_key=gemini_key, transport="rest")
-        model = genai.GenerativeModel("gemini-1.5-pro")
+        # Try flash first (free-tier friendly), falling back to other vision-capable models if needed
+        candidate_models = ["gemini-1.5-flash", "gemini-1.5-flash-latest", "gemini-1.5-pro", "gemini-1.5-pro-latest", "gemini-2.0-flash"]
         img = Image.open(io.BytesIO(image_bytes))
-        resp = model.generate_content([EXTRACTION_PROMPT, img])
+        resp = None
+        last_err = None
+        for m_name in candidate_models:
+            try:
+                m = genai.GenerativeModel(m_name)
+                resp = m.generate_content([EXTRACTION_PROMPT, img])
+                if resp and resp.text:
+                    break
+            except Exception as e:
+                last_err = e
+                continue
+
+        if resp is None:
+            raise RuntimeError(f"Gemini vision call failed across candidate models: {last_err}")
+
         text = resp.text.strip()
         if text.startswith("```json"):
             text = text[7:]
