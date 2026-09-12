@@ -1,0 +1,55 @@
+{
+  "file": "INV-27.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "INVOICE",
+      "invoice_number": "32917ALS55",
+      "invoice_date": "03/06/2025",
+      "due_date": "03/07/2025",
+      "currency": "KES",
+      "supplier_name": "Oakhaven Supply Ltd",
+      "supplier_address": "P.O Box 14108, Nairobi, Kenya 00400 KEN",
+      "supplier_vat_id": "P088353697W",
+      "supplier_bank_iban": "6786517608",
+      "buyer_name": "Northwind Support Kenya Ltd KES",
+      "buyer_address": "Rua do Ouro 117, Azure Towers, 10th Floor, Riverside Drive, 00600 Nairobi Kenya",
+      "payment_terms_text": "DUE DATE 03/07/2025 (30 days)",
+      "po_number": "",
+      "line_items": [
+        {"line_number": "1", "description": "Handling Out (per CBM)", "item_code": "", "uom": "CBM", "quantity": "0.2744", "unit_price": "500.00", "discount": "", "discount_percentage": "", "tax_rate": "16", "tax_amount": "21.95", "total": "137.20"},
+        {"line_number": "2", "description": "Transport of POS devices(SUNMI V2PRO) on 4th April", "item_code": "", "uom": "", "quantity": "1", "unit_price": "3000.00", "discount": "", "discount_percentage": "", "tax_rate": "16", "tax_amount": "480.00", "total": "3000.00"},
+        {"line_number": "3", "description": "Transport of POS DEVICES(SUNMI V2PRO) on 19th May", "item_code": "", "uom": "", "quantity": "1", "unit_price": "1500.00", "discount": "", "discount_percentage": "", "tax_rate": "16", "tax_amount": "240.00", "total": "1500.00"},
+        {"line_number": "4", "description": "Storage charges for POS devices(SUNMI V2PRO) from 1st to 19th May", "item_code": "", "uom": "CBM", "quantity": "40.53574", "unit_price": "30.00", "discount": "", "discount_percentage": "", "tax_rate": "16", "tax_amount": "194.57", "total": "1216.07"},
+        {"line_number": "5", "description": "Storage charges for POS devices(SUNMI V2PRO) from 20th to 31st May", "item_code": "", "uom": "CBM", "quantity": "22.30872", "unit_price": "30.00", "discount": "", "discount_percentage": "", "tax_rate": "16", "tax_amount": "107.08", "total": "669.26"},
+        {"line_number": "6", "description": "Storage charges for Food deliverybag(insulated bag) from 1st to 31st May", "item_code": "", "uom": "CBM", "quantity": "1646.2116", "unit_price": "30.00", "discount": "", "discount_percentage": "", "tax_rate": "16", "tax_amount": "7901.82", "total": "49386.35"},
+        {"line_number": "7", "description": "Stock Management fee", "item_code": "", "uom": "", "quantity": "1", "unit_price": "5000.00", "discount": "", "discount_percentage": "", "tax_rate": "16", "tax_amount": "800.00", "total": "5000.00"}
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "VAT @ 16%",
+          "tax_rate": "16",
+          "tax_amount": "9745.42"
+        }
+      ],
+      "totals": {
+        "subtotal": "60908.88",
+        "total_tax_amount": "9745.42",
+        "gross_total": "70654.30",
+        "balance_due": "70654.30",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Kenya warehouse & transport invoice: 60,908.88 KES net + 16% VAT 9,745.42 KES = 70,654.30 KES"
+    }
+  ]
+}

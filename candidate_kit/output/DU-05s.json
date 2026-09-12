@@ -1,0 +1,10 @@
+{
+  "file": "DU-05s.pdf",
+  "payables": [],
+  "declined": [
+    {
+      "doc_type": "DELIVERY_NOTE",
+      "reason": "Delivery notes and shipping documentation without invoice billing amounts"
+    }
+  ]
+}

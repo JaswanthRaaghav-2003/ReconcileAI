@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Automation & ERP Review Visualizer</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Custom scrollbars */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    .badge-exact { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-rounding { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .badge-discrepancy { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .badge-declined { background: rgba(148, 163, 184, 0.12); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.25); }
+  </style>
+</head>
+<body class="h-full flex flex-col font-sans overflow-hidden bg-slate-950 text-slate-200">
+
+  <!-- Top Navbar -->
+  <header class="h-14 border-b border-slate-800 bg-slate-900/80 backdrop-blur px-4 flex items-center justify-between shrink-0 z-20">
+    <div class="flex items-center space-x-3">
+      <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold shadow-lg shadow-indigo-600/30">
+        <i data-lucide="calculator" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <h1 class="text-sm font-semibold text-white tracking-wide flex items-center gap-2">
+          AP Automation & ERP Review Studio
+          <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">erp.py recompute</span>
+        </h1>
+      </div>
+    </div>
+
+    <!-- Quick Aggregate Stats Pills -->
+    <div id="headerStats" class="flex items-center space-x-3 text-xs">
+      <div class="bg-slate-800/80 px-2.5 py-1 rounded border border-slate-700/60 flex items-center gap-1.5">
+        <span class="text-slate-400">Total:</span>
+        <span id="statTotal" class="font-semibold text-white">42</span>
+      </div>
+      <div class="bg-emerald-950/40 px-2.5 py-1 rounded border border-emerald-800/50 flex items-center gap-1.5 text-emerald-300">
+        <span>Payables:</span>
+        <span id="statPayables" class="font-semibold text-emerald-200">38</span>
+      </div>
+      <div class="bg-slate-800/80 px-2.5 py-1 rounded border border-slate-700/60 flex items-center gap-1.5 text-slate-400">
+        <span>Declined:</span>
+        <span id="statDeclined" class="font-semibold text-slate-200">4</span>
+      </div>
+      <div class="bg-indigo-950/40 px-2.5 py-1 rounded border border-indigo-800/50 flex items-center gap-1.5 text-indigo-300">
+        <span>Reconciliation:</span>
+        <span id="statRecon" class="font-semibold text-indigo-200">97.4%</span>
+      </div>
+    </div>
+
+    <!-- Actions, API Key Config, & View Toggles -->
+    <div class="flex items-center space-x-2">
+      <!-- API Key & Engine Config Button -->
+      <button onclick="openApiModal()" id="btnApiSettings" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 border border-slate-700 flex items-center gap-1.5 transition-colors">
+        <span id="apiStatusDot" class="w-2 h-2 rounded-full bg-blue-400"></span>
+        <span id="apiStatusText" class="font-medium">Cache Mode ($0)</span>
+        <i data-lucide="key" class="w-3.5 h-3.5 text-slate-400"></i>
+      </button>
+
+      <!-- Upload New PDF Button -->
+      <button onclick="triggerUploadModal()" class="px-2.5 py-1 rounded-lg bg-indigo-600/80 hover:bg-indigo-600 text-xs text-white font-medium border border-indigo-500/50 flex items-center gap-1 transition-colors">
+        <i data-lucide="upload" class="w-3.5 h-3.5"></i> Upload PDF
+      </button>
+
+      <!-- View Modes -->
+      <div class="bg-slate-800 p-0.5 rounded-lg border border-slate-700 flex text-xs ml-1">
+        <button id="btnViewSplit" onclick="setViewMode('split')" class="px-2.5 py-1 rounded font-medium bg-slate-700 text-white shadow-sm flex items-center gap-1">
+          <i data-lucide="columns" class="w-3.5 h-3.5"></i> Split
+        </button>
+        <button id="btnViewPdf" onclick="setViewMode('pdf')" class="px-2.5 py-1 rounded font-medium text-slate-400 hover:text-white flex items-center gap-1">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i> PDF
+        </button>
+        <button id="btnViewData" onclick="setViewMode('data')" class="px-2.5 py-1 rounded font-medium text-slate-400 hover:text-white flex items-center gap-1">
+          <i data-lucide="database" class="w-3.5 h-3.5"></i> Ledger
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Work Area -->
+  <div class="flex-1 flex overflow-hidden">
+    
+    <!-- Sidebar: Document List -->
+    <aside class="w-80 border-r border-slate-800 bg-slate-900/50 flex flex-col shrink-0">
+      
+      <!-- Search & Filter Header -->
+      <div class="p-3 border-b border-slate-800 space-y-2">
+        <div class="relative">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-2.5 top-2.5"></i>
+          <input id="searchInput" oninput="filterDocuments()" type="text" placeholder="Search supplier, invoice #, file..." 
+                 class="w-full bg-slate-950 border border-slate-800 rounded-md pl-8 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="flex gap-1 text-[11px] overflow-x-auto pb-1">
+          <button onclick="setFilter('ALL')" id="filterAll" class="filter-btn px-2 py-0.5 rounded bg-indigo-600 text-white font-medium">All (42)</button>
+          <button onclick="setFilter('BOOKABLE')" id="filterBookable" class="filter-btn px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:bg-slate-700">Bookable (38)</button>
+          <button onclick="setFilter('DECLINED')" id="filterDeclined" class="filter-btn px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:bg-slate-700">Declined (4)</button>
+          <button onclick="setFilter('REVIEW')" id="filterReview" class="filter-btn px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:bg-slate-700">Review (4)</button>
+        </div>
+      </div>
+
+      <!-- Document List Container -->
+      <div id="documentList" class="flex-1 overflow-y-auto divide-y divide-slate-800/60 text-xs">
+        <div class="p-4 text-center text-slate-500">Loading documents...</div>
+      </div>
+    </aside>
+
+    <!-- Content Workspace -->
+    <main class="flex-1 flex overflow-hidden">
+      
+      <!-- Left: PDF Viewer Pane -->
+      <section id="panePdf" class="flex-1 border-r border-slate-800 bg-slate-950 flex flex-col overflow-hidden relative">
+        <div class="h-9 border-b border-slate-800 bg-slate-900/90 px-3 flex items-center justify-between text-xs text-slate-400 shrink-0">
+          <div class="flex items-center gap-2">
+            <i data-lucide="file" class="w-3.5 h-3.5 text-indigo-400"></i>
+            <span id="pdfFileName" class="font-mono text-slate-300">Select a document</span>
+          </div>
+          <a id="pdfExternalLink" href="#" target="_blank" class="hover:text-white flex items-center gap-1 text-[11px] text-slate-400 hover:underline">
+            <span>Open in New Tab</span>
+            <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
+        </div>
+        <div class="flex-1 bg-slate-900 relative">
+          <iframe id="pdfFrame" src="about:blank" class="w-full h-full border-none"></iframe>
+          <div id="pdfFallback" class="absolute inset-0 flex flex-col items-center justify-center text-slate-500 hidden p-6 text-center">
+            <i data-lucide="file-x" class="w-12 h-12 text-slate-600 mb-2"></i>
+            <p class="text-sm font-medium text-slate-400">No PDF Preview Available</p>
+            <p class="text-xs mt-1 text-slate-500">Select a document from the left list to view.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Payable & ERP Reconciliation Pane -->
+      <section id="paneData" class="flex-1 bg-slate-950 flex flex-col overflow-y-auto">
+        
+        <!-- Header Bar -->
+        <div class="p-4 border-b border-slate-800 bg-slate-900/60 sticky top-0 backdrop-blur z-10 space-y-3">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 id="docTitle" class="text-lg font-bold text-white tracking-tight">-</h2>
+                <span id="docTypeBadge" class="text-[10px] font-mono uppercase px-2 py-0.5 rounded font-semibold badge-exact">INVOICE</span>
+                <span id="docStatusBadge" class="text-[10px] font-mono px-2 py-0.5 rounded font-semibold badge-exact">EXACT_MATCH</span>
+              </div>
+              <p id="docSubtitle" class="text-xs text-slate-400 mt-0.5">-</p>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <!-- Live Re-extract Button -->
+              <button onclick="triggerReExtraction()" id="btnReExtract" title="Re-run extraction using live AI Vision LLM (or cache)" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs border border-slate-700 flex items-center gap-1 transition-colors">
+                <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-indigo-400"></i>
+                <span id="reExtractText">Re-extract</span>
+              </button>
+
+              <!-- Tab switches: Breakdown vs JSON -->
+              <div class="flex bg-slate-800 p-0.5 rounded-md text-xs border border-slate-700/80">
+                <button onclick="switchTab('breakdown')" id="tabBreakdownBtn" class="px-2.5 py-1 rounded bg-indigo-600 text-white font-medium">Reconciliation</button>
+                <button onclick="switchTab('rawJson')" id="tabJsonBtn" class="px-2.5 py-1 rounded text-slate-400 hover:text-white">JSON Payload</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Declined Alert Banner (Hidden by default) -->
+          <div id="declinedBanner" class="hidden p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs">
+            <div class="flex items-start gap-2">
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+              <div>
+                <span class="font-semibold text-amber-300">Non-Bookable Document Declined</span>
+                <p id="declinedReason" class="text-slate-300 mt-0.5 leading-relaxed">-</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live ERP Reconciliation Card -->
+          <div id="erpCard" class="p-3.5 rounded-lg bg-slate-900 border border-slate-800 space-y-2.5">
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-1.5 text-slate-300 font-semibold">
+                <i data-lucide="cpu" class="w-4 h-4 text-indigo-400"></i>
+                <span>ERP Oracle Recomputation (erp.py)</span>
+              </div>
+              <span id="erpMatchSummary" class="font-mono text-[11px] font-medium text-emerald-400">Exact Match</span>
+            </div>
+
+            <div class="grid grid-cols-4 gap-2 text-center pt-1 border-t border-slate-800/80">
+              <div class="bg-slate-950/60 p-2 rounded border border-slate-800">
+                <div class="text-[10px] uppercase tracking-wider text-slate-400">Stated Gross</div>
+                <div id="valStatedGross" class="text-sm font-mono font-bold text-slate-100 mt-0.5">-</div>
+              </div>
+              <div class="bg-slate-950/60 p-2 rounded border border-slate-800">
+                <div class="text-[10px] uppercase tracking-wider text-indigo-300">will_book_gross</div>
+                <div id="valWillBookGross" class="text-sm font-mono font-bold text-indigo-400 mt-0.5">-</div>
+              </div>
+              <div class="bg-slate-950/60 p-2 rounded border border-slate-800">
+                <div class="text-[10px] uppercase tracking-wider text-slate-400">Variance (Delta)</div>
+                <div id="valDelta" class="text-sm font-mono font-bold text-emerald-400 mt-0.5">0.00</div>
+              </div>
+              <div class="bg-slate-950/60 p-2 rounded border border-slate-800">
+                <div class="text-[10px] uppercase tracking-wider text-slate-400">Currency</div>
+                <div id="valCurrency" class="text-sm font-mono font-bold text-slate-300 mt-0.5">EUR</div>
+              </div>
+            </div>
+
+            <div id="erpAuditNote" class="text-[11px] text-slate-400 bg-slate-950/40 px-2.5 py-1.5 rounded font-mono border border-slate-800/60">
+              Audit note loading...
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tab Body: Breakdown -->
+        <div id="tabBreakdown" class="p-4 space-y-5">
+          
+          <!-- Master Data & Header Meta -->
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <!-- Supplier Card -->
+            <div class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Supplier Resolution</span>
+                <span id="supplierMatchPill" class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Master Matched</span>
+              </div>
+              <div id="supplierName" class="font-bold text-slate-100 text-sm">-</div>
+              <div class="text-slate-400 space-y-0.5 text-[11px]">
+                <div><span class="text-slate-500">Master ID:</span> <span id="supplierId" class="font-mono text-indigo-300">-</span></div>
+                <div><span class="text-slate-500">VAT ID:</span> <span id="supplierVat" class="font-mono text-slate-300">-</span></div>
+                <div><span class="text-slate-500">Address:</span> <span id="supplierAddress" class="text-slate-300">-</span></div>
+              </div>
+            </div>
+
+            <!-- Buyer & Invoice Meta Card -->
+            <div class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Accounting Metadata</span>
+                <span id="paymentTermsPill" class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-slate-300">Net 30</span>
+              </div>
+              <div class="grid grid-cols-2 gap-1.5 text-[11px] text-slate-400">
+                <div><span class="text-slate-500">Invoice #:</span> <span id="metaInvoiceNum" class="font-mono text-slate-200 font-semibold">-</span></div>
+                <div><span class="text-slate-500">PO #:</span> <span id="metaPoNum" class="font-mono text-indigo-300 font-semibold">-</span></div>
+                <div><span class="text-slate-500">Date:</span> <span id="metaInvoiceDate" class="text-slate-300 font-mono">-</span></div>
+                <div><span class="text-slate-500">Due:</span> <span id="metaDueDate" class="text-slate-300 font-mono">-</span></div>
+                <div><span class="text-slate-500">Company:</span> <span id="metaBuyerCode" class="font-mono text-slate-300">BOLTGROUP</span></div>
+                <div><span class="text-slate-500">BU / Loc:</span> <span id="metaBuCode" class="font-mono text-slate-300">-</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Line Items Section -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between text-xs">
+              <h3 class="font-semibold text-slate-200 flex items-center gap-1.5">
+                <i data-lucide="list" class="w-3.5 h-3.5 text-indigo-400"></i>
+                Decomposed Line Items (<span id="lineItemsCount">0</span>)
+              </h3>
+              <span class="text-[11px] text-slate-400">Net Unit Prices × Quantities − Discounts</span>
+            </div>
+
+            <div class="border border-slate-800 rounded-lg overflow-hidden bg-slate-900/40">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-800 bg-slate-900 text-slate-400 font-medium text-[11px]">
+                    <th class="py-2 px-3">#</th>
+                    <th class="py-2 px-3">Description</th>
+                    <th class="py-2 px-3 text-right">Qty</th>
+                    <th class="py-2 px-3 text-right">Unit Price</th>
+                    <th class="py-2 px-3 text-right">Discount</th>
+                    <th class="py-2 px-3 text-right">Line Tax</th>
+                    <th class="py-2 px-3 text-right">Total</th>
+                  </tr>
+                </thead>
+                <tbody id="lineItemsTable" class="divide-y divide-slate-800/60 text-slate-300">
+                  <tr><td colspan="7" class="py-4 text-center text-slate-500">No line items</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Taxes & Surcharges Section -->
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <!-- Taxes Card -->
+            <div class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 space-y-2">
+              <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1">
+                <i data-lucide="percent" class="w-3 h-3 text-indigo-400"></i> Tax Structure
+              </div>
+              <div id="taxesContainer" class="space-y-1.5">
+                <span class="text-slate-500 text-[11px]">No header taxes</span>
+              </div>
+            </div>
+
+            <!-- Charges & Freight Card -->
+            <div class="p-3 bg-slate-900/60 rounded-lg border border-slate-800 space-y-2">
+              <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1">
+                <i data-lucide="truck" class="w-3 h-3 text-indigo-400"></i> Charges & Surcharges
+              </div>
+              <div id="chargesContainer" class="space-y-1 text-[11px]">
+                <div class="flex justify-between"><span class="text-slate-500">Freight:</span> <span id="valFreight" class="font-mono text-slate-300">-</span></div>
+                <div class="flex justify-between"><span class="text-slate-500">Insurance:</span> <span id="valInsurance" class="font-mono text-slate-300">-</span></div>
+                <div class="flex justify-between"><span class="text-slate-500">Extra Charges:</span> <span id="valExtraCharges" class="font-mono text-slate-300">-</span></div>
+                <div class="flex justify-between"><span class="text-slate-500">Excise Duties:</span> <span id="valExcise" class="font-mono text-slate-300">-</span></div>
+                <div class="flex justify-between"><span class="text-slate-500">Header Discount:</span> <span id="valHeaderDiscount" class="font-mono text-emerald-400">-</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tab Body: Raw JSON -->
+        <div id="tabRawJson" class="hidden p-4 flex-1 flex flex-col">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs text-slate-400 font-mono">AUTODRAFT_SCHEMA Payload</span>
+            <button onclick="copyJson()" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs border border-slate-700 flex items-center gap-1">
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy JSON
+            </button>
+          </div>
+          <pre id="jsonViewer" class="p-4 bg-slate-900 rounded-lg border border-slate-800 text-xs font-mono text-emerald-300 overflow-x-auto select-all flex-1"></pre>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- API Key & Engine Modal -->
+  <div id="apiModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl max-w-lg w-full shadow-2xl p-6 space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded bg-indigo-600/30 border border-indigo-500/50 flex items-center justify-center text-indigo-400">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-semibold text-white text-sm">Multimodal Vision & API Key Settings</h3>
+        </div>
+        <button onclick="closeApiModal()" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Mode explanation banner -->
+      <div class="p-3 bg-slate-950/80 rounded-lg border border-slate-800 text-xs space-y-1">
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400 font-medium">Active Extraction Engine:</span>
+          <span id="modalActiveMode" class="font-mono text-blue-400 font-semibold text-[11px]">-</span>
+        </div>
+        <p class="text-slate-400 text-[11px] leading-relaxed pt-1">
+          For the 42 provided test PDFs, results are cached offline for deterministic $0 runs. Enter an API key below if you wish to run live Multimodal Vision transcription or process new unseen PDF files.
+        </p>
+      </div>
+
+      <!-- Inputs -->
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block text-slate-300 font-medium mb-1 flex items-center justify-between">
+            <span>Gemini API Key (Recommended)</span>
+            <span id="geminiLoadedPill" class="text-[10px] text-slate-500 font-mono">Not Set</span>
+          </label>
+          <input id="inputGeminiKey" type="password" placeholder="Enter GEMINI_API_KEY (AIzaSy...)" 
+                 class="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-slate-200 placeholder-slate-600 focus:outline-none focus:border-indigo-500">
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1 flex items-center justify-between">
+            <span>OpenAI API Key (Alternative)</span>
+            <span id="openaiLoadedPill" class="text-[10px] text-slate-500 font-mono">Not Set</span>
+          </label>
+          <input id="inputOpenaiKey" type="password" placeholder="Enter OPENAI_API_KEY (sk-...)" 
+                 class="w-full bg-slate-950 border border-slate-800 rounded px-3 py-2 text-slate-200 placeholder-slate-600 focus:outline-none focus:border-indigo-500">
+        </div>
+      </div>
+
+      <!-- Test Status Box -->
+      <div id="apiTestStatus" class="hidden p-2.5 rounded text-xs font-mono"></div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center justify-between pt-2 border-t border-slate-800">
+        <button onclick="testConnection()" id="btnTestConn" class="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs border border-slate-700 flex items-center gap-1.5">
+          <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i> Test Connection
+        </button>
+        <div class="flex items-center gap-2">
+          <button onclick="closeApiModal()" class="px-3 py-1.5 rounded text-slate-400 hover:text-white text-xs">Cancel</button>
+          <button onclick="saveApiKeys()" class="px-3.5 py-1.5 rounded bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs shadow-lg shadow-indigo-600/30">Save & Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upload Modal -->
+  <div id="uploadModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center hidden p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl max-w-md w-full shadow-2xl p-6 space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center gap-2">
+          <i data-lucide="file-up" class="w-4 h-4 text-indigo-400"></i>
+          <h3 class="font-semibold text-white text-sm">Upload & Process New PDF</h3>
+        </div>
+        <button onclick="closeUploadModal()" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <p class="text-xs text-slate-400">
+        Upload a supplier PDF invoice to run it through classification, payable decomposition, master data matching, and ERP booking verification.
+      </p>
+      <input type="file" id="pdfFileInput" accept="application/pdf" class="block w-full text-xs text-slate-400 file:mr-3 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-indigo-600 file:text-white hover:file:bg-indigo-500">
+      <div id="uploadStatus" class="text-xs hidden p-2 rounded"></div>
+      <div class="flex justify-end gap-2 pt-2 border-t border-slate-800">
+        <button onclick="closeUploadModal()" class="px-3 py-1.5 rounded text-slate-400 hover:text-white text-xs">Cancel</button>
+        <button onclick="submitUpload()" id="btnSubmitUpload" class="px-3.5 py-1.5 rounded bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs">Upload & Process</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client-Side JavaScript Logic -->
+  <script>
+    let allDocs = [];
+    let currentFilter = 'ALL';
+    let selectedFile = null;
+    let currentDocData = null;
+    let currentConfig = null;
+
+    // Load initial stats & doc list
+    async function init() {
+      lucide.createIcons();
+      await fetchConfig();
+      await fetchStats();
+      await fetchDocuments();
+    }
+
+    async function fetchConfig() {
+      try {
+        const res = await fetch('/api/config');
+        currentConfig = await res.json();
+        updateConfigBadge();
+      } catch (err) {
+        console.error("Failed to load config:", err);
+      }
+    }
+
+    function updateConfigBadge() {
+      const dot = document.getElementById('apiStatusDot');
+      const text = document.getElementById('apiStatusText');
+      const modalMode = document.getElementById('modalActiveMode');
+      const geminiPill = document.getElementById('geminiLoadedPill');
+      const openaiPill = document.getElementById('openaiLoadedPill');
+
+      if (currentConfig.has_gemini_key) {
+        dot.className = 'w-2 h-2 rounded-full bg-emerald-400';
+        text.innerText = 'Gemini 1.5 Pro Active';
+        modalMode.innerText = 'Gemini 1.5 Pro (Live Vision)';
+        modalMode.className = 'font-mono text-emerald-400 font-semibold text-[11px]';
+        geminiPill.innerText = currentConfig.masked_gemini_key || 'Configured';
+        geminiPill.className = 'text-[10px] text-emerald-400 font-mono';
+      } else if (currentConfig.has_openai_key) {
+        dot.className = 'w-2 h-2 rounded-full bg-emerald-400';
+        text.innerText = 'OpenAI GPT-4o Active';
+        modalMode.innerText = 'OpenAI GPT-4o (Live Vision)';
+        modalMode.className = 'font-mono text-emerald-400 font-semibold text-[11px]';
+        openaiPill.innerText = currentConfig.masked_openai_key || 'Configured';
+        openaiPill.className = 'text-[10px] text-emerald-400 font-mono';
+      } else {
+        dot.className = 'w-2 h-2 rounded-full bg-blue-400';
+        text.innerText = 'Cache Mode (42 Docs)';
+        modalMode.innerText = 'Offline Deterministic Cache ($0)';
+        modalMode.className = 'font-mono text-blue-400 font-semibold text-[11px]';
+        geminiPill.innerText = 'Not Set';
+        geminiPill.className = 'text-[10px] text-slate-500 font-mono';
+        openaiPill.innerText = 'Not Set';
+        openaiPill.className = 'text-[10px] text-slate-500 font-mono';
+      }
+    }
+
+    function openApiModal() {
+      document.getElementById('apiModal').classList.remove('hidden');
+      document.getElementById('apiTestStatus').classList.add('hidden');
+      lucide.createIcons();
+    }
+
+    function closeApiModal() {
+      document.getElementById('apiModal').classList.add('hidden');
+    }
+
+    async function saveApiKeys() {
+      const gemini = document.getElementById('inputGeminiKey').value.trim();
+      const openai = document.getElementById('inputOpenaiKey').value.trim();
+
+      try {
+        const res = await fetch('/api/config', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ gemini_api_key: gemini, openai_api_key: openai })
+        });
+        currentConfig = await res.json();
+        updateConfigBadge();
+        closeApiModal();
+        alert("API Configuration updated successfully!");
+      } catch (err) {
+        alert("Failed to update API keys: " + err.message);
+      }
+    }
+
+    async function testConnection() {
+      const btn = document.getElementById('btnTestConn');
+      const statusBox = document.getElementById('apiTestStatus');
+      const geminiInput = document.getElementById('inputGeminiKey').value.trim();
+      const openaiInput = document.getElementById('inputOpenaiKey').value.trim();
+
+      btn.disabled = true;
+      btn.innerText = 'Testing...';
+      statusBox.classList.remove('hidden');
+      statusBox.className = 'p-2.5 rounded text-xs font-mono bg-slate-950 border border-slate-800 text-slate-400';
+      statusBox.innerText = 'Sending ping authentication request...';
+
+      const provider = openaiInput && !geminiInput ? 'openai' : 'gemini';
+      const key = provider === 'openai' ? openaiInput : geminiInput;
+
+      try {
+        const res = await fetch('/api/test-key', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ provider, key })
+        });
+        const data = await res.json();
+        if (data.success) {
+          statusBox.className = 'p-2.5 rounded text-xs font-mono bg-emerald-950/40 border border-emerald-800/50 text-emerald-300';
+          statusBox.innerText = '✓ ' + data.message;
+        } else {
+          statusBox.className = 'p-2.5 rounded text-xs font-mono bg-red-950/40 border border-red-800/50 text-red-300';
+          statusBox.innerText = '✕ ' + data.message;
+        }
+      } catch (err) {
+        statusBox.className = 'p-2.5 rounded text-xs font-mono bg-red-950/40 border border-red-800/50 text-red-300';
+        statusBox.innerText = '✕ Connection test failed: ' + err.message;
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i> Test Connection';
+        lucide.createIcons();
+      }
+    }
+
+    async function triggerReExtraction() {
+      if (!selectedFile) return;
+      const btn = document.getElementById('btnReExtract');
+      const text = document.getElementById('reExtractText');
+      const forceLive = currentConfig && (currentConfig.has_gemini_key || currentConfig.has_openai_key);
+
+      const confirmMsg = forceLive 
+        ? `Re-extract ${selectedFile} using live Vision LLM API?`
+        : `Re-run pipeline on ${selectedFile} using cached extraction? (To use live vision, set an API key in Engine Settings)`;
+
+      if (!confirm(confirmMsg)) return;
+
+      btn.disabled = true;
+      text.innerText = 'Processing...';
+
+      try {
+        const res = await fetch(`/api/reprocess/${selectedFile}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ force_live: forceLive })
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert(data.message);
+          await fetchStats();
+          await fetchDocuments();
+          selectDocument(selectedFile);
+        } else {
+          alert("Error: " + data.message);
+        }
+      } catch (err) {
+        alert("Re-extraction failed: " + err.message);
+      } finally {
+        btn.disabled = false;
+        text.innerText = 'Re-extract';
+      }
+    }
+
+    function triggerUploadModal() {
+      document.getElementById('uploadModal').classList.remove('hidden');
+      document.getElementById('uploadStatus').classList.add('hidden');
+      lucide.createIcons();
+    }
+
+    function closeUploadModal() {
+      document.getElementById('uploadModal').classList.add('hidden');
+    }
+
+    async function submitUpload() {
+      const fileInput = document.getElementById('pdfFileInput');
+      if (!fileInput.files || fileInput.files.length === 0) {
+        alert("Please select a PDF file to upload.");
+        return;
+      }
+
+      const file = fileInput.files[0];
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const btn = document.getElementById('btnSubmitUpload');
+      const status = document.getElementById('uploadStatus');
+      btn.disabled = true;
+      btn.innerText = 'Processing...';
+      status.classList.remove('hidden');
+      status.className = 'text-xs p-2 rounded bg-slate-950 border border-slate-800 text-slate-400';
+      status.innerText = 'Uploading and running through accounting pipeline...';
+
+      try {
+        const res = await fetch('/api/upload', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+        if (data.success) {
+          status.className = 'text-xs p-2 rounded bg-emerald-950/40 border border-emerald-800/50 text-emerald-300';
+          status.innerText = '✓ ' + data.message;
+          setTimeout(async () => {
+            closeUploadModal();
+            await fetchStats();
+            await fetchDocuments();
+            selectDocument(data.file);
+          }, 1000);
+        } else {
+          status.className = 'text-xs p-2 rounded bg-red-950/40 border border-red-800/50 text-red-300';
+          status.innerText = '✕ ' + data.message;
+        }
+      } catch (err) {
+        status.className = 'text-xs p-2 rounded bg-red-950/40 border border-red-800/50 text-red-300';
+        status.innerText = '✕ Upload failed: ' + err.message;
+      } finally {
+        btn.disabled = false;
+        btn.innerText = 'Upload & Process';
+      }
+    }
+
+    async function fetchStats() {
+      try {
+        const res = await fetch('/api/stats');
+        const d = await res.json();
+        document.getElementById('statTotal').innerText = d.total_documents;
+        document.getElementById('statPayables').innerText = d.bookable_payables;
+        document.getElementById('statDeclined').innerText = d.declined_documents;
+        document.getElementById('statRecon').innerText = d.reconciliation_rate_pct + '%';
+      } catch (err) {
+        console.error("Failed to load stats:", err);
+      }
+    }
+
+    async function fetchDocuments() {
+      try {
+        const res = await fetch('/api/documents');
+        allDocs = await res.json();
+        renderDocumentList();
+        if (allDocs.length > 0 && !selectedFile) {
+          selectDocument(allDocs[0].file);
+        }
+      } catch (err) {
+        console.error("Failed to load documents:", err);
+        document.getElementById('documentList').innerHTML = '<div class="p-4 text-center text-red-400">Failed to load documents.</div>';
+      }
+    }
+
+    function setFilter(filter) {
+      currentFilter = filter;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('bg-indigo-600', 'text-white');
+        btn.classList.add('bg-slate-800', 'text-slate-300');
+      });
+      const activeBtn = {
+        'ALL': 'filterAll',
+        'BOOKABLE': 'filterBookable',
+        'DECLINED': 'filterDeclined',
+        'REVIEW': 'filterReview'
+      }[filter];
+      if (activeBtn) {
+        const b = document.getElementById(activeBtn);
+        b.classList.add('bg-indigo-600', 'text-white');
+        b.classList.remove('bg-slate-800', 'text-slate-300');
+      }
+      renderDocumentList();
+    }
+
+    function filterDocuments() {
+      renderDocumentList();
+    }
+
+    function renderDocumentList() {
+      const q = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+      const container = document.getElementById('documentList');
+      
+      const filtered = allDocs.filter(d => {
+        if (currentFilter === 'BOOKABLE' && !d.is_payable) return false;
+        if (currentFilter === 'DECLINED' && d.is_payable) return false;
+        if (currentFilter === 'REVIEW' && d.status !== 'DISCREPANCY' && d.status !== 'ROUNDING_DELTA') return false;
+
+        if (!q) return true;
+        return (
+          d.file.toLowerCase().includes(q) ||
+          d.supplier_name.toLowerCase().includes(q) ||
+          d.invoice_number.toLowerCase().includes(q) ||
+          d.currency.toLowerCase().includes(q)
+        );
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<div class="p-6 text-center text-slate-500">No matching documents</div>';
+        return;
+      }
+
+      container.innerHTML = filtered.map(d => {
+        const isSel = d.file === selectedFile;
+        let badgeClass = 'badge-exact';
+        let badgeText = `${d.delta >= 0 ? '+' : ''}${d.delta.toFixed(2)}`;
+        
+        if (!d.is_payable) {
+          badgeClass = 'badge-declined';
+          badgeText = d.doc_type || 'DECLINED';
+        } else if (d.status === 'ROUNDING_DELTA') {
+          badgeClass = 'badge-rounding';
+          badgeText = `${d.delta >= 0 ? '+' : ''}${d.delta.toFixed(2)}`;
+        } else if (d.status === 'DISCREPANCY') {
+          badgeClass = 'badge-discrepancy';
+          badgeText = `DELTA ${d.delta >= 0 ? '+' : ''}${d.delta.toFixed(2)}`;
+        }
+
+        return `
+          <div onclick="selectDocument('${d.file}')" class="p-3 cursor-pointer transition-colors ${isSel ? 'bg-slate-800/90 border-l-2 border-indigo-500' : 'hover:bg-slate-800/40'}">
+            <div class="flex items-center justify-between mb-1">
+              <span class="font-mono font-semibold text-slate-200 text-xs">${d.file}</span>
+              <span class="text-[10px] font-mono px-1.5 py-0.5 rounded font-bold ${badgeClass}">${badgeText}</span>
+            </div>
+            <div class="text-[11px] text-slate-400 truncate mb-1">
+              ${d.supplier_name}
+            </div>
+            <div class="flex items-center justify-between text-[10px] text-slate-500 font-mono">
+              <span>${d.invoice_date || '-'}</span>
+              <span class="font-bold text-slate-300">${d.stated_gross ? d.stated_gross.toFixed(2) + ' ' + d.currency : '-'}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function selectDocument(fileName) {
+      selectedFile = fileName;
+      renderDocumentList();
+
+      document.getElementById('pdfFileName').innerText = fileName;
+      document.getElementById('pdfExternalLink').href = `/api/pdf/${fileName}`;
+      document.getElementById('pdfFrame').src = `/api/pdf/${fileName}`;
+
+      try {
+        const res = await fetch(`/api/documents/${fileName}`);
+        currentDocData = await res.json();
+        renderDocumentDetails(currentDocData);
+      } catch (err) {
+        console.error("Failed to load details for", fileName, err);
+      }
+    }
+
+    function renderDocumentDetails(data) {
+      const isDeclined = !data.payables || data.payables.length === 0;
+      const decBanner = document.getElementById('declinedBanner');
+      const erpCard = document.getElementById('erpCard');
+
+      document.getElementById('docTitle').innerText = data.file;
+
+      if (isDeclined) {
+        const dec = (data.declined && data.declined[0]) || { doc_type: 'DECLINED', reason: 'Declined' };
+        decBanner.classList.remove('hidden');
+        document.getElementById('declinedReason').innerText = `${dec.doc_type}: ${dec.reason}`;
+        
+        document.getElementById('docTypeBadge').innerText = dec.doc_type;
+        document.getElementById('docTypeBadge').className = 'text-[10px] font-mono uppercase px-2 py-0.5 rounded font-semibold badge-declined';
+        document.getElementById('docStatusBadge').innerText = 'NON_BOOKABLE';
+        document.getElementById('docStatusBadge').className = 'text-[10px] font-mono px-2 py-0.5 rounded font-semibold badge-declined';
+        document.getElementById('docSubtitle').innerText = 'Safely declined from ledger recomputation';
+
+        erpCard.classList.add('opacity-40');
+        document.getElementById('valStatedGross').innerText = '-';
+        document.getElementById('valWillBookGross').innerText = '0.00';
+        document.getElementById('valDelta').innerText = '-';
+        document.getElementById('valCurrency').innerText = '-';
+        document.getElementById('erpMatchSummary').innerText = 'Declined';
+        document.getElementById('erpAuditNote').innerText = 'Document rejected by classification rules. No ledger entries posted.';
+
+        document.getElementById('lineItemsTable').innerHTML = '<tr><td colspan="7" class="py-6 text-center text-slate-500">Document declined — no bookable line items extracted.</td></tr>';
+        document.getElementById('lineItemsCount').innerText = '0';
+        document.getElementById('supplierName').innerText = '-';
+        document.getElementById('supplierId').innerText = '-';
+        document.getElementById('supplierVat').innerText = '-';
+        document.getElementById('supplierAddress').innerText = '-';
+      } else {
+        decBanner.classList.add('hidden');
+        erpCard.classList.remove('opacity-40');
+
+        const p = data.payables[0];
+        const v = (data.verifications && data.verifications[0]) || {};
+
+        document.getElementById('docTypeBadge').innerText = p.invoice_type || 'INVOICE';
+        document.getElementById('docSubtitle').innerText = `Supplier: ${(p.supplier && p.supplier.name) || 'Unknown'} | Currency: ${p.currency || 'EUR'}`;
+
+        // Status badge
+        const badgeElem = document.getElementById('docStatusBadge');
+        if (v.is_exact_match) {
+          badgeElem.innerText = 'EXACT CENT MATCH';
+          badgeElem.className = 'text-[10px] font-mono px-2 py-0.5 rounded font-semibold badge-exact';
+          document.getElementById('erpMatchSummary').innerText = '✓ Balanced (0.00 Delta)';
+          document.getElementById('erpMatchSummary').className = 'font-mono text-[11px] font-medium text-emerald-400';
+        } else if (v.is_close_match) {
+          badgeElem.innerText = 'ROUNDING DELTA (±0.01)';
+          badgeElem.className = 'text-[10px] font-mono px-2 py-0.5 rounded font-semibold badge-rounding';
+          document.getElementById('erpMatchSummary').innerText = '⚠ Half-Up Cent Delta';
+          document.getElementById('erpMatchSummary').className = 'font-mono text-[11px] font-medium text-amber-400';
+        } else {
+          badgeElem.innerText = 'SUPPLIER ARITHMETIC ERROR';
+          badgeElem.className = 'text-[10px] font-mono px-2 py-0.5 rounded font-semibold badge-discrepancy';
+          document.getElementById('erpMatchSummary').innerText = '✕ Math Discrepancy Flagged';
+          document.getElementById('erpMatchSummary').className = 'font-mono text-[11px] font-medium text-red-400';
+        }
+
+        // ERP Card values
+        document.getElementById('valStatedGross').innerText = v.stated_gross ? v.stated_gross.toFixed(2) : (p.gross_total || '0.00');
+        document.getElementById('valWillBookGross').innerText = v.will_book_gross ? v.will_book_gross.toFixed(2) : '0.00';
+        const deltaFormatted = (v.delta !== undefined && v.delta !== null) ? `${v.delta >= 0 ? '+' : ''}${v.delta.toFixed(2)}` : '0.00';
+        document.getElementById('valDelta').innerText = deltaFormatted;
+        document.getElementById('valDelta').className = `text-sm font-mono font-bold mt-0.5 ${v.is_exact_match ? 'text-emerald-400' : (v.is_close_match ? 'text-amber-400' : 'text-red-400')}`;
+        document.getElementById('valCurrency').innerText = p.currency || 'EUR';
+        document.getElementById('erpAuditNote').innerText = v.details || 'ERP recomputed successfully.';
+
+        // Supplier Meta
+        const s = p.supplier || {};
+        document.getElementById('supplierName').innerText = s.name || 'Unknown Supplier';
+        document.getElementById('supplierId').innerText = s.supplier_id || '(No exact master match)';
+        document.getElementById('supplierVat').innerText = s.vat_id || '(None printed)';
+        document.getElementById('supplierAddress').innerText = s.address || '(None printed)';
+        
+        const suppPill = document.getElementById('supplierMatchPill');
+        if (s.supplier_id) {
+          suppPill.innerText = 'Master Match';
+          suppPill.className = 'text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
+        } else {
+          suppPill.innerText = 'Unmatched';
+          suppPill.className = 'text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-slate-400';
+        }
+
+        // Header Meta
+        document.getElementById('metaInvoiceNum').innerText = p.invoice_number || '-';
+        document.getElementById('metaPoNum').innerText = p.po_number || p.po_id || '(None)';
+        document.getElementById('metaInvoiceDate').innerText = p.invoice_date || '-';
+        document.getElementById('metaDueDate').innerText = p.due_date || '-';
+        document.getElementById('paymentTermsPill').innerText = p.payment_term_id || 'Net 30';
+
+        const buyer = p.buyer || {};
+        document.getElementById('metaBuyerCode').innerText = buyer.company_code || 'BOLTGROUP';
+        document.getElementById('metaBuCode').innerText = `${buyer.business_unit_code || '-'} / ${buyer.location_code || '-'}`;
+
+        // Line items
+        const items = p.line_items || [];
+        document.getElementById('lineItemsCount').innerText = items.length;
+        if (items.length === 0) {
+          document.getElementById('lineItemsTable').innerHTML = '<tr><td colspan="7" class="py-4 text-center text-slate-500">No line items</td></tr>';
+        } else {
+          document.getElementById('lineItemsTable').innerHTML = items.map((li, idx) => {
+            const taxDesc = (li.taxes && li.taxes.length > 0) ? `${li.taxes[0].tax_rate}%` : (li.tax_rate ? `${li.tax_rate}%` : '-');
+            const discDesc = li.discount_percentage ? `${li.discount_percentage}%` : (li.discount ? `${li.discount}` : '-');
+            return `
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-2 px-3 font-mono text-slate-500">${idx + 1}</td>
+                <td class="py-2 px-3 text-slate-200 font-medium">
+                  <div>${li.description || 'Line Item'}</div>
+                  <div class="text-[10px] text-slate-500 font-mono">${li.item_type || 'GOODS'} ${li.uom ? '• ' + li.uom : ''}</div>
+                </td>
+                <td class="py-2 px-3 text-right font-mono text-slate-300">${li.quantity || '1'}</td>
+                <td class="py-2 px-3 text-right font-mono text-slate-300">${li.unit_price || '0.00'}</td>
+                <td class="py-2 px-3 text-right font-mono text-slate-400">${discDesc}</td>
+                <td class="py-2 px-3 text-right font-mono text-slate-400">${taxDesc}</td>
+                <td class="py-2 px-3 text-right font-mono font-bold text-slate-200">${li.total || '0.00'}</td>
+              </tr>
+            `;
+          }).join('');
+        }
+
+        // Taxes breakdown
+        const taxes = p.taxes || [];
+        const taxContainer = document.getElementById('taxesContainer');
+        if (taxes.length === 0) {
+          taxContainer.innerHTML = '<span class="text-slate-500 text-[11px]">No header taxes</span>';
+        } else {
+          taxContainer.innerHTML = taxes.map(t => `
+            <div class="flex items-center justify-between text-[11px] bg-slate-950/60 p-1.5 rounded border border-slate-800">
+              <div>
+                <span class="font-semibold text-slate-300">${t.tax_type || 'VAT'} ${t.tax_rate}%</span>
+                <span class="text-slate-500 font-mono text-[10px] block">${t.tax_type_code || t.tax_name || ''}</span>
+              </div>
+              <span class="font-mono font-bold text-slate-200">${t.tax_amount || '0.00'}</span>
+            </div>
+          `).join('');
+        }
+
+        // Charges
+        document.getElementById('valFreight').innerText = p.freight_charges || '-';
+        document.getElementById('valInsurance').innerText = p.insurance_charges || '-';
+        document.getElementById('valExtraCharges').innerText = p.extra_charges || '-';
+        document.getElementById('valExcise').innerText = p.excise_duties || '-';
+        document.getElementById('valHeaderDiscount').innerText = p.discount_amount ? `-${p.discount_amount}` : '-';
+      }
+
+      // Raw JSON update
+      document.getElementById('jsonViewer').innerText = JSON.stringify(data.raw_json || data, null, 2);
+      lucide.createIcons();
+    }
+
+    function switchTab(tab) {
+      if (tab === 'breakdown') {
+        document.getElementById('tabBreakdown').classList.remove('hidden');
+        document.getElementById('tabRawJson').classList.add('hidden');
+        document.getElementById('tabBreakdownBtn').className = 'px-2.5 py-1 rounded bg-indigo-600 text-white font-medium';
+        document.getElementById('tabJsonBtn').className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white';
+      } else {
+        document.getElementById('tabBreakdown').classList.add('hidden');
+        document.getElementById('tabRawJson').classList.remove('hidden');
+        document.getElementById('tabBreakdownBtn').className = 'px-2.5 py-1 rounded text-slate-400 hover:text-white';
+        document.getElementById('tabJsonBtn').className = 'px-2.5 py-1 rounded bg-indigo-600 text-white font-medium';
+      }
+    }
+
+    function setViewMode(mode) {
+      const panePdf = document.getElementById('panePdf');
+      const paneData = document.getElementById('paneData');
+      const btnSplit = document.getElementById('btnViewSplit');
+      const btnPdf = document.getElementById('btnViewPdf');
+      const btnData = document.getElementById('btnViewData');
+
+      [btnSplit, btnPdf, btnData].forEach(b => {
+        b.className = 'px-2.5 py-1 rounded font-medium text-slate-400 hover:text-white flex items-center gap-1';
+      });
+
+      if (mode === 'split') {
+        panePdf.classList.remove('hidden');
+        paneData.classList.remove('hidden');
+        panePdf.style.flex = '1';
+        paneData.style.flex = '1';
+        btnSplit.className = 'px-2.5 py-1 rounded font-medium bg-slate-700 text-white shadow-sm flex items-center gap-1';
+      } else if (mode === 'pdf') {
+        panePdf.classList.remove('hidden');
+        paneData.classList.add('hidden');
+        panePdf.style.flex = '1';
+        btnPdf.className = 'px-2.5 py-1 rounded font-medium bg-slate-700 text-white shadow-sm flex items-center gap-1';
+      } else if (mode === 'data') {
+        panePdf.classList.add('hidden');
+        paneData.classList.remove('hidden');
+        paneData.style.flex = '1';
+        btnData.className = 'px-2.5 py-1 rounded font-medium bg-slate-700 text-white shadow-sm flex items-center gap-1';
+      }
+    }
+
+    function copyJson() {
+      const text = document.getElementById('jsonViewer').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Copied JSON payload to clipboard!");
+      });
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>

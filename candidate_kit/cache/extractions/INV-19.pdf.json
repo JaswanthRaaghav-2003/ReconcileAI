@@ -1,0 +1,72 @@
+{
+  "file": "INV-19.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "INVOICE",
+      "invoice_number": "RED-240124",
+      "invoice_date": "2026-01-24",
+      "due_date": "",
+      "currency": "GHS",
+      "supplier_name": "Redwater Technologies",
+      "supplier_address": "Lindenstrasse 111",
+      "supplier_vat_id": "C9765403675",
+      "supplier_bank_iban": "1028243888660",
+      "buyer_name": "Northwind HOLDINGS OÜ",
+      "buyer_address": "High Street 10",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Meal per head",
+          "item_code": "",
+          "uom": "",
+          "quantity": "60",
+          "unit_price": "90.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "5400.00"
+        },
+        {
+          "line_number": "2",
+          "description": "Transportation and Set up",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "1200.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "1200.00"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {"tax_type": "NHIL", "tax_name": "NHIL (2.5%)", "tax_rate": "2.5", "tax_amount": "165.00"},
+        {"tax_type": "GETFL", "tax_name": "GETFund Levy (2.5%)", "tax_rate": "2.5", "tax_amount": "165.00"},
+        {"tax_type": "COVID", "tax_name": "COVID-19 Levy (1%)", "tax_rate": "1", "tax_amount": "66.00"},
+        {"tax_type": "VAT", "tax_name": "VAT (15%)", "tax_rate": "15", "tax_amount": "1049.40"}
+      ],
+      "totals": {
+        "subtotal": "6600.00",
+        "total_tax_amount": "1445.40",
+        "gross_total": "8045.40",
+        "balance_due": "8045.40",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Ghanaian compound tax invoice: 6,600.00 net + 165.00 NHIL + 165.00 GETFund + 66.00 COVID + 1049.40 VAT (on levy inclusive 6996.00) = 8045.40 GHS"
+    }
+  ]
+}

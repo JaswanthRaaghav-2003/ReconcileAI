@@ -1,0 +1,353 @@
+{
+  "file": "INV-28.pdf",
+  "payables": [
+    {
+      "invoice_number": "3025139",
+      "invoice_date": "2026-02-28",
+      "due_date": "2026-03-30",
+      "invoice_type": "INVOICE",
+      "currency": "DKK",
+      "supplier": {
+        "name": "Silverbrook Print",
+        "supplier_id": "",
+        "address": "Rua do Ouro 40, 2605 Brøndby",
+        "vat_id": "DK74347584"
+      },
+      "buyer": {
+        "company_code": "",
+        "business_unit_code": "",
+        "location_code": ""
+      },
+      "payment_term_id": "Net_30",
+      "po_number": "",
+      "po_id": "",
+      "gross_total": "4478.20",
+      "subtotal": "3582.56",
+      "total_tax_amount": "895.64",
+      "discount_amount": "",
+      "freight_charges": "",
+      "insurance_charges": "",
+      "extra_charges": "",
+      "excise_duties": "",
+      "taxes": [],
+      "line_items": [
+        {
+          "description": "Bølgepap",
+          "item_type": "SERVICE",
+          "uom": "KG",
+          "quantity": "10",
+          "unit_price": "0.521",
+          "total": "5.21",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "1.30",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "1.30",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Lithium-ion bat. Lowgrade",
+          "item_type": "SERVICE",
+          "uom": "KG",
+          "quantity": "35",
+          "unit_price": "32.42714",
+          "total": "1134.95",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "283.74",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "283.74",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Træ, Klasse A2",
+          "item_type": "SERVICE",
+          "uom": "KG",
+          "quantity": "100",
+          "unit_price": "2.632",
+          "total": "263.20",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "65.80",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "65.80",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Transport 1. enhed liftbil",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "1",
+          "unit_price": "513.00",
+          "total": "513.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "128.25",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "128.25",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Tømning 660L minicontainer",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "1",
+          "unit_price": "172.00",
+          "total": "172.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "43.00",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "43.00",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Oparbejdning papir / pap",
+          "item_type": "SERVICE",
+          "uom": "KG",
+          "quantity": "10",
+          "unit_price": "0.69",
+          "total": "6.90",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "1.73",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "1.73",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Vermiculite, 100 L, salg",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "1",
+          "unit_price": "355.19",
+          "total": "355.19",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "88.80",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "88.80",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Vejbenyttelsesafgift",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "1",
+          "unit_price": "65.25",
+          "total": "65.25",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "16.31",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "16.31",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Miljøindberetning",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "1",
+          "unit_price": "119.00",
+          "total": "119.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "29.75",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "29.75",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Fakturaadministration",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "1",
+          "unit_price": "200.00",
+          "total": "200.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "50.00",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "50.00",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Leje minicont. 660 ltr. m/lås",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "1",
+          "unit_price": "120.00",
+          "total": "120.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "30.00",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "30.00",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Leje minicont. 240 ltr.",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "3",
+          "unit_price": "60.00",
+          "total": "180.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "45.00",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "45.00",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Leje - Plastfad, 120 ltr.",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "1",
+          "unit_price": "156.86",
+          "total": "156.86",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "39.22",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "39.22",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Leje minicont. 660 ltr.",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "2",
+          "unit_price": "112.00",
+          "total": "224.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "56.00",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "56.00",
+              "tax_type_code": ""
+            }
+          ]
+        },
+        {
+          "description": "Leje Plast stativer",
+          "item_type": "SERVICE",
+          "uom": "STK",
+          "quantity": "1",
+          "unit_price": "67.00",
+          "total": "67.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "25",
+          "tax_amount": "16.75",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 25%",
+              "tax_rate": "25",
+              "tax_amount": "16.75",
+              "tax_type_code": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "declined": []
+}

@@ -1,0 +1,10 @@
+{
+  "file": "DU-09.pdf",
+  "payables": [],
+  "declined": [
+    {
+      "doc_type": "INTERNAL_FORM",
+      "reason": "Internal request or authorization form (donations and charitable), not a supplier invoice or bookable payable"
+    }
+  ]
+}

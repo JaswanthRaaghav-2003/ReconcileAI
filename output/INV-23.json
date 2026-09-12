@@ -1,0 +1,10 @@
+{
+  "file": "INV-23.pdf",
+  "payables": [],
+  "declined": [
+    {
+      "doc_type": "ESTIMATE",
+      "reason": "Price quotation / estimate (estimate), not a finalized tax invoice or bookable payable"
+    }
+  ]
+}

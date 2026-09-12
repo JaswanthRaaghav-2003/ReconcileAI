@@ -1,0 +1,121 @@
+{
+  "file": "INV-25.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "FAC A98/712",
+      "invoice_number": "A98/712",
+      "invoice_date": "2026-04-13",
+      "due_date": "2026-05-13",
+      "currency": "EUR",
+      "supplier_name": "Fairmont Services LDA",
+      "supplier_address": "High Street 34, 1000-137 LISBOA",
+      "supplier_vat_id": "029461956",
+      "supplier_bank_iban": "PT03380028170335405108224",
+      "buyer_name": "Support Services PT Unipessoal, Lda",
+      "buyer_address": "Lisboa, NIF 353598648",
+      "payment_terms_text": "Condições de Pagamento: Pagamento Credito; Vencimento em 2026-05-13 (30 days)",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "FOT./IMPRESSÃO A4 CORES ESTUD.",
+          "item_code": "C6",
+          "uom": "UNI",
+          "quantity": "400",
+          "unit_price": "0.325225",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "23",
+          "tax_amount": "29.92",
+          "total": "130.09"
+        },
+        {
+          "line_number": "2",
+          "description": "FOLHA 80g",
+          "item_code": "FL1",
+          "uom": "UNI",
+          "quantity": "400",
+          "unit_price": "0.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "23",
+          "tax_amount": "0.00",
+          "total": "0.00"
+        },
+        {
+          "line_number": "3",
+          "description": "FOLHA 120g",
+          "item_code": "FL2",
+          "uom": "UNI",
+          "quantity": "200",
+          "unit_price": "0.065",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "23",
+          "tax_amount": "2.99",
+          "total": "13.00"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "IVA",
+          "tax_name": "IVA 23%",
+          "tax_rate": "23",
+          "tax_amount": "32.91"
+        }
+      ],
+      "totals": {
+        "subtotal": "143.09",
+        "total_tax_amount": "32.91",
+        "gross_total": "176.00",
+        "balance_due": "176.00",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Original invoice (page 2 is exact Duplicado copy): Net 143.09 EUR + 23% IVA 32.91 EUR = 176.00 EUR"
+    },
+    {
+      "page_number": 2,
+      "document_title": "FAC A98/712 Duplicado",
+      "invoice_number": "A98/712",
+      "invoice_date": "2026-04-13",
+      "due_date": "2026-05-13",
+      "currency": "EUR",
+      "supplier_name": "Fairmont Services LDA",
+      "supplier_address": "",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "",
+      "buyer_address": "",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [],
+      "totals": {
+        "subtotal": "",
+        "total_tax_amount": "",
+        "gross_total": "",
+        "balance_due": "",
+        "amount_credited": ""
+      },
+      "page_type": "DUPLICATE",
+      "notes": "Exact duplicate of page 1"
+    }
+  ]
+}

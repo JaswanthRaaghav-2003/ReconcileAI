@@ -1,0 +1,61 @@
+{
+  "file": "HLD-08.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Copy Tax Invoice",
+      "invoice_number": "162547",
+      "invoice_date": "19/05/2026",
+      "due_date": "",
+      "currency": "ZAR",
+      "supplier_name": "Meridian Technologies / Meridian Print LTD",
+      "supplier_address": "PO Box 13385 Jacobs 4026",
+      "supplier_vat_id": "2731114415",
+      "supplier_bank_iban": "",
+      "buyer_name": "Meridian Technologies",
+      "buyer_address": "High Street 1 EXT 1 Johannesburg, GP 1401",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "TGB001/531",
+          "description": "Hall's Smooth Fruit Punch 1lt M 337521",
+          "item_code": "TGB001/531",
+          "uom": "1000",
+          "quantity": "468",
+          "unit_price": "276.74",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "15",
+          "tax_amount": "19427.15",
+          "total": "129514.32"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "VAT 15%",
+          "tax_rate": "15",
+          "tax_amount": "19427.15"
+        }
+      ],
+      "totals": {
+        "subtotal": "129514.32",
+        "total_tax_amount": "19427.15",
+        "gross_total": "148941.47",
+        "balance_due": "148941.47",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Unit price 276.74 per 1000 units, quantity 468 (total nett 129,514.32 ZAR) @ 15% VAT"
+    }
+  ]
+}

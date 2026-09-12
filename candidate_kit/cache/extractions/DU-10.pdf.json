@@ -1,0 +1,74 @@
+{
+  "file": "DU-10.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Credit Note",
+      "invoice_number": "5900366703",
+      "invoice_date": "15/04/2026",
+      "due_date": "",
+      "currency": "GBP",
+      "supplier_name": "Blackpine Consulting Limited",
+      "supplier_address": "Parnu mnt 50, Chippenham SN14 0GF",
+      "supplier_vat_id": "GB447324473",
+      "supplier_bank_iban": "GB73ETPB85770231331598",
+      "buyer_name": "Northwind Services UK Limited",
+      "buyer_address": "Jalan Ampang 157, London SE1 4GT, UNITED KINGDOM",
+      "payment_terms_text": "Within 30 days of invoice date",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Logitech Tap Scheduler Touch Controller",
+          "item_code": "4582314",
+          "uom": "",
+          "quantity": "6",
+          "unit_price": "457.24",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "20",
+          "tax_amount": "548.69",
+          "total": "2743.44"
+        },
+        {
+          "line_number": "2",
+          "description": "Logitech Tap Touch Controller Cat5e Kit",
+          "item_code": "4541892",
+          "uom": "",
+          "quantity": "2",
+          "unit_price": "743.35",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "20",
+          "tax_amount": "297.34",
+          "total": "1486.70"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "VAT 20 %",
+          "tax_rate": "20",
+          "tax_amount": "846.03"
+        }
+      ],
+      "totals": {
+        "subtotal": "4230.14",
+        "total_tax_amount": "846.03",
+        "gross_total": "5076.17",
+        "balance_due": "5076.17",
+        "amount_credited": ""
+      },
+      "page_type": "CREDIT_MEMO",
+      "notes": "Credit note for failed delivery of invoice 0394289238"
+    }
+  ]
+}

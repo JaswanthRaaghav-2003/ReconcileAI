@@ -1,0 +1,62 @@
+{
+  "file": "DU-02.pdf",
+  "num_pages": 20,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Customs Consolidated Invoice",
+      "invoice_number": "554701215",
+      "invoice_date": "01/06/2026",
+      "due_date": "",
+      "currency": "EUR",
+      "supplier_name": "Novatek U.S. LLC",
+      "supplier_address": "Avenida Central 455, 1950 KRAAINEM, BELGIUM",
+      "supplier_vat_id": "BE2480635349",
+      "supplier_bank_iban": "",
+      "buyer_name": "Novatek Saglik ve Cevre Bilim.LTD.STI",
+      "buyer_address": "34912 KAGITHANE - ISTANBUL CITY, TURKEY",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [
+        {"line_number": "1", "description": "REA,DIAG,POLY CHAIN REACT,", "item_code": "3822190080", "uom": "PC", "quantity": "2", "unit_price": "10.61", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "21.22"},
+        {"line_number": "2", "description": "REA,DIAG,POLY CHAIN REACT,", "item_code": "3822190080", "uom": "PC", "quantity": "1", "unit_price": "37.19", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "37.19"},
+        {"line_number": "3", "description": "PLSTS,GSKTS, WASHERS, OTHE", "item_code": "3926904590", "uom": "PC", "quantity": "3", "unit_price": "30.4667", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "91.40"},
+        {"line_number": "4", "description": "OTH,PLSTIC MAT,OTH, OTH,OTH", "item_code": "3926909989", "uom": "PC", "quantity": "8", "unit_price": "1.45875", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "11.67"},
+        {"line_number": "5", "description": "GLASSWARE,LAB,HYG, PHARM,OTH", "item_code": "7017200000", "uom": "PC", "quantity": "8", "unit_price": "1.35375", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "10.83"},
+        {"line_number": "6", "description": "FILT/PURIF MACH PARTS, OTH.", "item_code": "8421990180", "uom": "PC", "quantity": "1", "unit_price": "162.94", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "162.94"},
+        {"line_number": "7", "description": "FLOUR MILL AND GRAIN MILL", "item_code": "8437800010", "uom": "EA", "quantity": "2", "unit_price": "3108.095", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "6216.19"},
+        {"line_number": "8", "description": "OTH PRTS/MECH APPS,W/ IND F", "item_code": "8479909596", "uom": "EA", "quantity": "1", "unit_price": "115.97", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "115.97"},
+        {"line_number": "9", "description": "OTH PRTS/MECH APPS,W/ IND F", "item_code": "8479909596", "uom": "PC", "quantity": "1", "unit_price": "261.28", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "261.28"},
+        {"line_number": "10", "description": "TUNGSTEN HALGN LMP<=100V,OTHER", "item_code": "8539212080", "uom": "PC", "quantity": "2", "unit_price": "53.765", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "107.53"},
+        {"line_number": "11", "description": "ULTRAVIOLET LAMP", "item_code": "8539490040", "uom": "PC", "quantity": "1", "unit_price": "327.79", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "327.79"},
+        {"line_number": "12", "description": "ULTRAVIOLET LAMP", "item_code": "8539490040", "uom": "PC", "quantity": "1", "unit_price": "264.89", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "264.89"},
+        {"line_number": "13", "description": "ELNDLEEBBN TERS/G", "item_code": "9027304080", "uom": "EA", "quantity": "1", "unit_price": "20850.22", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "20850.22"},
+        {"line_number": "14", "description": "ELNDLEEBBN TERS/G", "item_code": "9027304080", "uom": "PC", "quantity": "1", "unit_price": "4359.50", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "4359.50"},
+        {"line_number": "15", "description": "PRT ELEC INSTRUMENT,902720", "item_code": "9027905625", "uom": "PC", "quantity": "2", "unit_price": "232.725", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "465.45"},
+        {"line_number": "16", "description": "PRT ELEC INSTRUMENT,902720", "item_code": "9027905625", "uom": "PC", "quantity": "2", "unit_price": "217.185", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "434.37"},
+        {"line_number": "17", "description": "PRT ELEC INSTRUMENT,902720", "item_code": "9027905625", "uom": "PC", "quantity": "8", "unit_price": "1.23", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "9.84"},
+        {"line_number": "18", "description": "PRT ELEC INSTRUMENT,902730", "item_code": "9027905630", "uom": "EA", "quantity": "2", "unit_price": "206.22", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "412.44"},
+        {"line_number": "19", "description": "PT ELC INST, OT,902720/30/5", "item_code": "9027905695", "uom": "EA", "quantity": "8", "unit_price": "78.7625", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "630.10"},
+        {"line_number": "20", "description": "PT ELC INST, OT,902720/30/5", "item_code": "9027905695", "uom": "EA", "quantity": "6", "unit_price": "381.3133", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "2287.88"},
+        {"line_number": "21", "description": "PT ELC INST, OT,902720/30/5", "item_code": "9027905695", "uom": "PC", "quantity": "2", "unit_price": "228.12", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "456.24"}
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [],
+      "totals": {
+        "subtotal": "37534.94",
+        "total_tax_amount": "0.00",
+        "gross_total": "37534.94",
+        "balance_due": "37534.94",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Customs Consolidated Invoice (pages 1-2), followed by detailed Turkish customs declarations"
+    }
+  ]
+}

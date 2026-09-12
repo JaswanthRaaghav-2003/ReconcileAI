@@ -1,0 +1,87 @@
+{
+  "file": "INV-14.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "TAX INVOICE",
+      "invoice_number": "INV-1587",
+      "invoice_date": "01 May 2026",
+      "due_date": "31 May 2026",
+      "currency": "GBP",
+      "supplier_name": "Silverbrook Media Limited",
+      "supplier_address": "Parnu mnt 117, London N1 9RY, UNITED KINGDOM",
+      "supplier_vat_id": "474927490",
+      "supplier_bank_iban": "GB84FAQA54689987784014",
+      "buyer_name": "Northwind Services UK Ltd",
+      "buyer_address": "Rua do Ouro 175, Taper Studio, London SE1 4GT",
+      "payment_terms_text": "Due Date: 31 May 2026",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Management Fee for June 2026",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "14620.18",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "20",
+          "tax_amount": "2924.04",
+          "total": "14620.18"
+        },
+        {
+          "line_number": "2",
+          "description": "Business Rates for June 2026",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "9987.50",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "9987.50"
+        },
+        {
+          "line_number": "3",
+          "description": "Utilities for June 2026",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "1435.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "20",
+          "tax_amount": "287.00",
+          "total": "1435.00"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "Total VAT 20%",
+          "tax_rate": "20",
+          "tax_amount": "3211.04"
+        }
+      ],
+      "totals": {
+        "subtotal": "26042.68",
+        "total_tax_amount": "3211.04",
+        "gross_total": "29253.72",
+        "balance_due": "29253.72",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "UK property invoice: 16,055.18 taxable @ 20% VAT (3,211.04 GBP), 9,987.50 exempt, total 29,253.72 GBP"
+    }
+  ]
+}

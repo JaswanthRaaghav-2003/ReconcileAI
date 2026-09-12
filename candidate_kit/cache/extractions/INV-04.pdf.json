@@ -1,0 +1,61 @@
+{
+  "file": "INV-04.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "TAX INVOICE",
+      "invoice_number": "INV7097292303",
+      "invoice_date": "30 Apr 2025",
+      "due_date": "31 May 2025",
+      "currency": "ZAR",
+      "supplier_name": "Larkspur Distribution Meridian Print",
+      "supplier_address": "Gartenweg 173, F04, Kiepersol House, Gauteng 2195, South Africa",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "Northwind Services ZA (Pty) Meridian Print Ltd",
+      "buyer_address": "Unit 7, Block B, Gartenweg 60, Maitland, WESTERN CAPE CAPE TOWN 7405",
+      "payment_terms_text": "Due Date: 31 May 2025",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Standard Criminal Verification",
+          "item_code": "",
+          "uom": "",
+          "quantity": "133",
+          "unit_price": "129.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "15",
+          "tax_amount": "2573.55",
+          "total": "17157.00"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "TOTAL VAT",
+          "tax_rate": "15",
+          "tax_amount": "2573.55"
+        }
+      ],
+      "totals": {
+        "subtotal": "17157.00",
+        "total_tax_amount": "2573.55",
+        "gross_total": "19730.55",
+        "balance_due": "6620.55",
+        "amount_credited": "13110.00"
+      },
+      "page_type": "INVOICE",
+      "notes": "Invoice total 19,730.55 ZAR, less amount credited 13,110.00 ZAR, amount due 6,620.55 ZAR"
+    }
+  ]
+}

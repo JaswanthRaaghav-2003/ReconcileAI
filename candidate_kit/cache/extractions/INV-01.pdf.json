@@ -1,0 +1,74 @@
+{
+  "file": "INV-01.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Rechnung",
+      "invoice_number": "852566",
+      "invoice_date": "02.02.2026",
+      "due_date": "12.02.2026",
+      "currency": "EUR",
+      "supplier_name": "Kingsley Media",
+      "supplier_address": "",
+      "supplier_vat_id": "EE398766194",
+      "supplier_bank_iban": "",
+      "buyer_name": "Northwind Operations OÜ",
+      "buyer_address": "Lindenstrasse 15, 10134 Estonia",
+      "payment_terms_text": "Bitte begleichen Sie den Betrag bis zum 12.02.2026 auf eine der aufgeführten Bankverbindungen.",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Projektmanagement Nachberechnung aus November",
+          "item_code": "",
+          "uom": "Std.",
+          "quantity": "4",
+          "unit_price": "73.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "292.00"
+        },
+        {
+          "line_number": "2",
+          "description": "Projektmanagement Nachberechnung aus Dezember",
+          "item_code": "",
+          "uom": "Std.",
+          "quantity": "2",
+          "unit_price": "73.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "146.00"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "Reverse Charge",
+          "tax_rate": "0",
+          "tax_amount": "0.00"
+        }
+      ],
+      "totals": {
+        "subtotal": "438.00",
+        "total_tax_amount": "0.00",
+        "gross_total": "438.00",
+        "balance_due": "438.00",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Reverse Charge; Liefer-/Leistungsdatum: Zeitraum von 01.01.2026 bis 31.01.2026"
+    }
+  ]
+}

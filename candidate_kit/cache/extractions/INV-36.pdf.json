@@ -1,0 +1,61 @@
+{
+  "file": "INV-36.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "INVOICE",
+      "invoice_number": "44273107",
+      "invoice_date": "18-Jun-2018",
+      "due_date": "18-Jul-2018",
+      "currency": "USD",
+      "supplier_name": "Oracle America, Inc.",
+      "supplier_address": "500 Oracle Parkway Redwood Shores, CA 94065 United States",
+      "supplier_vat_id": "94-2805249",
+      "supplier_bank_iban": "4522-020841",
+      "buyer_name": "AmeriHealth Caritas Services",
+      "buyer_address": "200 Stevens Drive Philadelphia, PA 19113 United States",
+      "payment_terms_text": "30 NET",
+      "po_number": "1000021496",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Managed Cloud Services - Computer and Administration Services - Managed Cloud Services - Additional Services 18-JUL-2018 : 17-OCT-2018",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "91580.50",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "91580.50"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "TAX",
+          "tax_rate": "0",
+          "tax_amount": "0.00"
+        }
+      ],
+      "totals": {
+        "subtotal": "91580.50",
+        "total_tax_amount": "0.00",
+        "gross_total": "91580.50",
+        "balance_due": "91580.50",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Oracle Cloud Services 30 NET"
+    }
+  ]
+}

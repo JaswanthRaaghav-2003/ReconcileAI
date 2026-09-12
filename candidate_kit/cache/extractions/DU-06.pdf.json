@@ -1,0 +1,153 @@
+{
+  "file": "DU-06.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Fatura",
+      "invoice_number": "FN 05/80906935",
+      "invoice_date": "2026-06-15",
+      "due_date": "2026-07-16",
+      "currency": "EUR",
+      "supplier_name": "Blackpine Supply S.A",
+      "supplier_address": "Qta da Mendanha, OTAPARK,, Fração AN, 2580-490 Carregado",
+      "supplier_vat_id": "PT785255159",
+      "supplier_bank_iban": "PT28909636405289370959536",
+      "buyer_name": "Northwind SUPPORT SERVICES PT, UNIPESSOAL",
+      "buyer_address": "Bahnhofstrasse 224, 1250-148 LISBOA",
+      "payment_terms_text": "Vencimento: 2026-07-16; Modo Pagamento: Transf. bancaria",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "62782",
+          "description": "Empanadilha Atum Cozida (50u)",
+          "item_code": "62782",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "41.68",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "23.00",
+          "tax_amount": "9.59",
+          "total": "41.68"
+        },
+        {
+          "line_number": "67110",
+          "description": "Pao Burger Brioch LeBrio14px4u",
+          "item_code": "67110",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "28.43",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "6.00",
+          "tax_amount": "1.71",
+          "total": "28.43"
+        },
+        {
+          "line_number": "67322",
+          "description": "Chapata Cristallino 28px2u",
+          "item_code": "67322",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "25.94",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "6.00",
+          "tax_amount": "1.56",
+          "total": "25.94"
+        },
+        {
+          "line_number": "85101",
+          "description": "Pao Maestra Classica 7u",
+          "item_code": "85101",
+          "uom": "",
+          "quantity": "2",
+          "unit_price": "13.43",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "6.00",
+          "tax_amount": "1.61",
+          "total": "26.86"
+        },
+        {
+          "line_number": "85102",
+          "description": "Pao Maestra Cereais 7u",
+          "item_code": "85102",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "15.29",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "6.00",
+          "tax_amount": "0.92",
+          "total": "15.29"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "IVA",
+          "tax_name": "IVA 23%",
+          "tax_rate": "23",
+          "tax_amount": "9.59"
+        },
+        {
+          "tax_type": "IVA",
+          "tax_name": "IVA 6%",
+          "tax_rate": "6",
+          "tax_amount": "5.79"
+        }
+      ],
+      "totals": {
+        "subtotal": "138.20",
+        "total_tax_amount": "15.38",
+        "gross_total": "153.58",
+        "balance_due": "153.58",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Original invoice with multi-rate IVA (23% and 6%)"
+    },
+    {
+      "page_number": 2,
+      "document_title": "Direção de Entrega",
+      "invoice_number": "FN 05/80906935",
+      "invoice_date": "2026-06-15",
+      "due_date": "",
+      "currency": "",
+      "supplier_name": "Blackpine Supply S.A",
+      "supplier_address": "",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "",
+      "buyer_address": "",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [],
+      "totals": {
+        "subtotal": "",
+        "total_tax_amount": "",
+        "gross_total": "",
+        "balance_due": "",
+        "amount_credited": ""
+      },
+      "page_type": "DELIVERY_NOTE",
+      "notes": "Delivery receipt and packing slip"
+    }
+  ]
+}

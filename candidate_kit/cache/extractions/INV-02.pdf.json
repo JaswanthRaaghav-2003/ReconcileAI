@@ -1,0 +1,56 @@
+{
+  "file": "INV-02.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Arve",
+      "invoice_number": "9972-907",
+      "invoice_date": "18-03-2026",
+      "due_date": "01-04-2026",
+      "currency": "EUR",
+      "supplier_name": "Meridian Logistics OÜ",
+      "supplier_address": "Avenida Central 22, 50106 Tartu linn, Estonia",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "EE682389839721862212",
+      "buyer_name": "Northwind Technology OÜ",
+      "buyer_address": "Market Road 15, Harjumaa, 10134 Tallinn, Estonia",
+      "payment_terms_text": "Maksetähtaeg 01-04-2026",
+      "po_number": "PO-EE-2026-0044",
+      "line_items": [
+        {"line_number": "1", "description": "Led Bar FOS Luminus BAR", "item_code": "", "uom": "tundi", "quantity": "9", "unit_price": "6.00", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "54.00"},
+        {"line_number": "2", "description": "Meremiin ADJ Starburst", "item_code": "", "uom": "tundi", "quantity": "1", "unit_price": "10.00", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "10.00"},
+        {"line_number": "3", "description": "Pioneer CDJ-3000", "item_code": "", "uom": "tundi", "quantity": "2", "unit_price": "45.00", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "90.00"},
+        {"line_number": "4", "description": "Pioneer DJM-900 NXS2 mixer", "item_code": "", "uom": "tundi", "quantity": "1", "unit_price": "45.00", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "45.00"},
+        {"line_number": "5", "description": "DJ laud 2m x 0.5m h=1m", "item_code": "", "uom": "päev", "quantity": "1", "unit_price": "18.00", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "18.00"},
+        {"line_number": "6", "description": "Aktiivkõlar Veritas 8000 komplekt", "item_code": "", "uom": "tundi", "quantity": "1", "unit_price": "103.60", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "103.60"},
+        {"line_number": "7", "description": "Linnasisene transport", "item_code": "", "uom": "Fikseeritud", "quantity": "1", "unit_price": "50.00", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "50.00"},
+        {"line_number": "8", "description": "Tehnik", "item_code": "", "uom": "tundi", "quantity": "2", "unit_price": "84.00", "discount": "", "discount_percentage": "", "tax_rate": "", "tax_amount": "", "total": "168.00"}
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "48.09",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "Käibemaks 24%",
+          "tax_rate": "24",
+          "tax_amount": "117.72"
+        }
+      ],
+      "totals": {
+        "subtotal": "538.60",
+        "total_tax_amount": "117.72",
+        "gross_total": "608.23",
+        "balance_due": "608.23",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Estonian AV equipment rental with header discount 48.09 EUR and 24% VAT"
+    }
+  ]
+}

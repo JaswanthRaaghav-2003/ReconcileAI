@@ -1,0 +1,74 @@
+{
+  "file": "DU-09.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "FORM: Donations and Charitable Contributions",
+      "invoice_number": "",
+      "invoice_date": "1/12/26",
+      "due_date": "",
+      "currency": "USD",
+      "supplier_name": "Ashford Systems",
+      "supplier_address": "402 Road, SC 29526, USA",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "Cadence",
+      "buyer_address": "",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [],
+      "totals": {
+        "subtotal": "",
+        "total_tax_amount": "",
+        "gross_total": "1995.00",
+        "balance_due": "1995.00",
+        "amount_credited": ""
+      },
+      "page_type": "INTERNAL_FORM",
+      "notes": "Internal donation/sponsorship contribution form for Hearing Healthcare Conference ($1995.00 USD)"
+    },
+    {
+      "page_number": 2,
+      "document_title": "Email Correspondence",
+      "invoice_number": "",
+      "invoice_date": "March 18, 2026",
+      "due_date": "",
+      "currency": "",
+      "supplier_name": "",
+      "supplier_address": "",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "",
+      "buyer_address": "",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [],
+      "totals": {
+        "subtotal": "",
+        "total_tax_amount": "",
+        "gross_total": "",
+        "balance_due": "",
+        "amount_credited": ""
+      },
+      "page_type": "INTERNAL_FORM",
+      "notes": "Internal email from Elena Keller (PTP Americas Helpdesk) forwarding the donation form"
+    }
+  ]
+}

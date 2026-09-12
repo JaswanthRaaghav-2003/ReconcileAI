@@ -1,0 +1,67 @@
+{
+  "file": "HLD-01.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "ใบวางบิล (INVOICE)",
+      "invoice_number": "SI6675/02/467",
+      "invoice_date": "05.05.2569",
+      "due_date": "",
+      "currency": "THB",
+      "supplier_name": "บริษัท ซิงค์ ครีเอชั่น จำกัด (Larkspur Technologies)",
+      "supplier_address": "799/124 หมู่ที่ 3 ตำบลแพรกษา จังหวัดสมุทรปราการ 10280",
+      "supplier_vat_id": "0105556100879",
+      "supplier_bank_iban": "",
+      "buyer_name": "Northwind SUPPORT SERVICES (THAILAND) LIMITED",
+      "buyer_address": "8 อาคารทีวัน ชั้นที่ 16 ซอยสุขุมวิท 40 แขวงพระโขนง เขตคลองเตย กรุงเทพมหานคร",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Staff 2 Units X 6 Days",
+          "item_code": "",
+          "uom": "Unit",
+          "quantity": "12",
+          "unit_price": "600.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "7200.00"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "648.00",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "Vat 7%",
+          "tax_rate": "7",
+          "tax_amount": "549.36"
+        },
+        {
+          "tax_type": "WHT",
+          "tax_name": "Withholding Tax 3%",
+          "tax_rate": "3",
+          "tax_amount": "-235.44"
+        }
+      ],
+      "totals": {
+        "subtotal": "7200.00",
+        "total_tax_amount": "313.92",
+        "gross_total": "8161.92",
+        "balance_due": "8161.92",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Management fee 9% (648.00 THB), VAT 7% applied on fee-inclusive base (549.36 THB), Withholding tax 3% deducted (-235.44 THB)"
+    }
+  ]
+}

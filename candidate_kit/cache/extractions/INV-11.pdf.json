@@ -1,0 +1,52 @@
+{
+  "file": "INV-11.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "ARVE INVOICE",
+      "invoice_number": "18109293",
+      "invoice_date": "07.04.26",
+      "due_date": "28.04.26",
+      "currency": "EUR",
+      "supplier_name": "Meridian Media",
+      "supplier_address": "Gartenweg 12",
+      "supplier_vat_id": "EE063536009",
+      "supplier_bank_iban": "EE063132264381058219",
+      "buyer_name": "Northwind Operations OÜ",
+      "buyer_address": "Lindenstrasse 15, 10134 TALLINN EESTI",
+      "payment_terms_text": "MAKSETÄHTAEG DUE DATE 28.04.26 (21 days)",
+      "po_number": "",
+      "line_items": [
+        {"line_number": "408", "description": "AGREED PICKUP FEE", "item_code": "408", "uom": "", "quantity": "1", "unit_price": "5.00", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "1.20", "total": "5.00"},
+        {"line_number": "551", "description": "TARNEKULUD", "item_code": "551", "uom": "", "quantity": "1", "unit_price": "53.40", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "12.82", "total": "53.40"},
+        {"line_number": "805", "description": "AGREED DELIVERY FEE", "item_code": "805", "uom": "", "quantity": "1", "unit_price": "5.00", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "1.20", "total": "5.00"},
+        {"line_number": "920", "description": "BAF 6,93% (16.03-29.03)", "item_code": "920", "uom": "", "quantity": "1", "unit_price": "3.70", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "0.89", "total": "3.70"}
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "KM 24,0 %",
+          "tax_rate": "24",
+          "tax_amount": "16.11"
+        }
+      ],
+      "totals": {
+        "subtotal": "67.10",
+        "total_tax_amount": "16.11",
+        "gross_total": "83.21",
+        "balance_due": "83.21",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Freight delivery invoice: 67.10 EUR net, 24% VAT 16.11 EUR, total 83.21 EUR"
+    }
+  ]
+}

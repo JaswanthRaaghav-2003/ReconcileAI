@@ -1,0 +1,61 @@
+{
+  "file": "HLD-03.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Factura",
+      "invoice_number": "ZF1-3845708",
+      "invoice_date": "02.12.2025",
+      "due_date": "01.01.2026",
+      "currency": "EUR",
+      "supplier_name": "Distribeer Bebidas Lda",
+      "supplier_address": "Rua do Ouro 138, 4300 Lisboa",
+      "supplier_vat_id": "PT502345678",
+      "supplier_bank_iban": "PT50000701234567890123456",
+      "buyer_name": "Northwind Services PT Unipessoal Lda",
+      "buyer_address": "Kadaka tee 224, 1250-148 Lisboa",
+      "payment_terms_text": "Data de Vencimento 01.01.2026 (30 days)",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "TRINCA ALE T22 6X1500 CXE NTT",
+          "item_code": "5601012004984",
+          "uom": "CX",
+          "quantity": "1",
+          "unit_price": "123.36",
+          "discount": "63.85",
+          "discount_percentage": "51.76",
+          "tax_rate": "13",
+          "tax_amount": "7.74",
+          "total": "59.51"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "IVA",
+          "tax_name": "IVA 13%",
+          "tax_rate": "13",
+          "tax_amount": "7.74"
+        }
+      ],
+      "totals": {
+        "subtotal": "59.51",
+        "total_tax_amount": "7.74",
+        "gross_total": "67.25",
+        "balance_due": "67.25",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Line item discount 51.76% (63.85 EUR), base 59.51 EUR @ 13% IVA (7.74 EUR)"
+    }
+  ]
+}

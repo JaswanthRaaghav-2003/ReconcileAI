@@ -1,0 +1,54 @@
+{
+  "file": "DU-05.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Tax Invoice",
+      "invoice_number": "7363916",
+      "invoice_date": "30.06.2026",
+      "due_date": "28.09.2026",
+      "currency": "SGD",
+      "supplier_name": "Vantek Pte Ltd",
+      "supplier_address": "High Street 7 #03-66/67/68/69 Singapore 737664 Singapore",
+      "supplier_vat_id": "207490313H",
+      "supplier_bank_iban": "",
+      "buyer_name": "Cadence Pte. Ltd - Standard",
+      "buyer_address": "Jalan Ampang 08 Singapore 539775",
+      "payment_terms_text": "Terms of payment: 90 days net; Due date: Up to 28.09.2026 without deduction",
+      "po_number": "3057199",
+      "line_items": [
+        {
+          "line_number": "80",
+          "description": "F:WSA_89424080_HSS (N) H2940 DKC",
+          "item_code": "4108044",
+          "uom": "PC",
+          "quantity": "100",
+          "unit_price": "7.7166",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "771.66"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [],
+      "totals": {
+        "subtotal": "771.66",
+        "total_tax_amount": "0.00",
+        "gross_total": "771.66",
+        "balance_due": "771.66",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "List price per unit 771.66 per 100 PC (PU 100)"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "file": "DU-08.pdf",
+  "payables": [],
+  "declined": [
+    {
+      "doc_type": "REMINDER",
+      "reason": "Dunning letter / payment reminder (mahnung), not an original bookable invoice"
+    }
+  ]
+}

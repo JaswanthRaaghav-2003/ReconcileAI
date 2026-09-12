@@ -1,0 +1,61 @@
+{
+  "file": "INV-03.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "TAX INVOICE",
+      "invoice_number": "INV-75162461",
+      "invoice_date": "25 May 2025",
+      "due_date": "8 Jun 2025",
+      "currency": "ZAR",
+      "supplier_name": "Cloverdale Print Ltd",
+      "supplier_address": "Bahnhofstrasse 9",
+      "supplier_vat_id": "3590736231",
+      "supplier_bank_iban": "",
+      "buyer_name": "Northwind Services ZA (Pty) Ltd",
+      "buyer_address": "",
+      "payment_terms_text": "Due Date: 8 Jun 2025",
+      "po_number": "PO-ZA218-81-057014",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Contract Office cleaning - Contract",
+          "item_code": "Item14607",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "7434.78",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "15",
+          "tax_amount": "1115.22",
+          "total": "7434.78"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "VAT 15%",
+          "tax_rate": "15",
+          "tax_amount": "1115.22"
+        }
+      ],
+      "totals": {
+        "subtotal": "7434.78",
+        "total_tax_amount": "1115.22",
+        "gross_total": "8550.00",
+        "balance_due": "8550.00",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Page 2 is a payment advice slip"
+    }
+  ]
+}

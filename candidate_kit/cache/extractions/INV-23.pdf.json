@@ -1,0 +1,72 @@
+{
+  "file": "INV-23.pdf",
+  "num_pages": 6,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "ESTIMATE",
+      "invoice_number": "EST-259684",
+      "invoice_date": "31 Dec 2025",
+      "due_date": "",
+      "currency": "GHS",
+      "supplier_name": "Kingsley Supply LIMITED",
+      "supplier_address": "Rua do Ouro 88, Ghana",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "Northwind HOLDINGS",
+      "buyer_address": "Ghana",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Custom Duties - IAS001",
+          "item_code": "IAS001",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "13289.19",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "13289.19"
+        },
+        {
+          "line_number": "2",
+          "description": "Service Charges - FDX0001",
+          "item_code": "FDX0001",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "356.85",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "356.85"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {"tax_type": "GETFL", "tax_name": "GETFund (2.5%)", "tax_rate": "2.5", "tax_amount": "8.92"},
+        {"tax_type": "NHIL", "tax_name": "NHIL (2.5%)", "tax_rate": "2.5", "tax_amount": "8.92"},
+        {"tax_type": "COVID", "tax_name": "Covid Levy (1%)", "tax_rate": "1", "tax_amount": "3.57"},
+        {"tax_type": "VAT", "tax_name": "VAT Output-15 (15%)", "tax_rate": "15", "tax_amount": "56.74"}
+      ],
+      "totals": {
+        "subtotal": "13646.04",
+        "total_tax_amount": "78.15",
+        "gross_total": "13724.19",
+        "balance_due": "13724.19",
+        "amount_credited": ""
+      },
+      "page_type": "ESTIMATE",
+      "notes": "Cost estimate and deposit quotation: PLEASE BE INFORMED THAT A DEPOSIT OF GHC13,000 IS REQUIRED TO ENABLE US TO PROCEED WITH THE CUSTOMS DUTY (pages 4-6 ICUMS calculator)"
+    }
+  ]
+}

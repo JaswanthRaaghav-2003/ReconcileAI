@@ -1,0 +1,69 @@
+{
+  "file": "INV-13.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Arve",
+      "invoice_number": "1410",
+      "invoice_date": "30.04.2026",
+      "due_date": "30.05.2026",
+      "currency": "EUR",
+      "supplier_name": "Cloverdale Supply OÜ",
+      "supplier_address": "High Street 64, Eesti",
+      "supplier_vat_id": "EE085819779",
+      "supplier_bank_iban": "EE978205278750080990",
+      "buyer_name": "Northwind Services EE OÜ",
+      "buyer_address": "Rua do Ouro 15, 10134 Kesklinna linnaosa, Tallinn, Harju maakond",
+      "payment_terms_text": "Tasumistingimus: 30 päeva; Tasumistähtaeg: 30.05.2026",
+      "po_number": "",
+      "line_items": [
+        {"line_number": "1", "description": "Parking fee EUROPARK", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "63479.69", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "15235.13", "total": "63479.69"},
+        {"line_number": "2", "description": "Parking fee EUROPARK discount 20%", "item_code": "1", "uom": "", "quantity": "-1", "unit_price": "12695.94", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "-3047.03", "total": "-12695.94"},
+        {"line_number": "3", "description": "Parking fee EUROPARK success fee", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "3173.98", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "761.76", "total": "3173.98"},
+        {"line_number": "4", "description": "Parking fee EUROPARK Ülemiste City H Garage, zone 335", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "234.86", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "56.37", "total": "234.86"},
+        {"line_number": "5", "description": "Parking fee EUROPARK KESKLINN", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "13528.54", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "13528.54"},
+        {"line_number": "6", "description": "Parking fee EUROPARK SÜDALINN", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "8897.68", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "8897.68"},
+        {"line_number": "7", "description": "Parking start fee EUROPARK", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "6976.80", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "1674.43", "total": "6976.80"},
+        {"line_number": "8", "description": "Parking fee ÜHISTEENUSED OPEN AREA", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "21380.06", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "5131.21", "total": "21380.06"},
+        {"line_number": "9", "description": "Parking fee ÜHISTEENUSED OPEN AREA discount 20%", "item_code": "1", "uom": "", "quantity": "-1", "unit_price": "4276.01", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "-1026.24", "total": "-4276.01"},
+        {"line_number": "10", "description": "Parking fee ÜHISTEENUSED OPEN AREA success fee", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "1069.00", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "256.56", "total": "1069.00"},
+        {"line_number": "11", "description": "Parking fee ÜHISTEENUSED TARTU", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "875.10", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "875.10"},
+        {"line_number": "12", "description": "Parking start fee ÜHISTEENUSED", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "1939.80", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "465.55", "total": "1939.80"},
+        {"line_number": "13", "description": "Parking fee AVALIKUD TEENUSED", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "1075.86", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "258.21", "total": "1075.86"},
+        {"line_number": "14", "description": "Parking fee AVALIKUD TEENUSED discount 20%", "item_code": "1", "uom": "", "quantity": "-1", "unit_price": "215.17", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "-51.64", "total": "-215.17"},
+        {"line_number": "15", "description": "Parking fee AVALIKUD TEENUSED success fee", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "53.79", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "12.91", "total": "53.79"},
+        {"line_number": "16", "description": "Parking start fee AVALIKUD TEENUSED", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "119.00", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "28.56", "total": "119.00"},
+        {"line_number": "17", "description": "Parking fee Snabb", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "20711.63", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "4970.79", "total": "20711.63"},
+        {"line_number": "18", "description": "Parking fee Snabb discount", "item_code": "1", "uom": "", "quantity": "-1", "unit_price": "2946.89", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "-707.25", "total": "-2946.89"},
+        {"line_number": "19", "description": "Parking fee Snabb success fee", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "736.70", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "176.81", "total": "736.70"},
+        {"line_number": "20", "description": "Parking fee Snabb with special price", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "1952.18", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "468.52", "total": "1952.18"},
+        {"line_number": "21", "description": "Parking fee Snabb special price for Northdiscount", "item_code": "1", "uom": "", "quantity": "-1", "unit_price": "1108.87", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "-266.13", "total": "-1108.87"},
+        {"line_number": "22", "description": "Parking fee Snabb special price for Northsucess fee", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "160.85", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "38.60", "total": "160.85"},
+        {"line_number": "23", "description": "Parking start fee Snabb", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "2379.20", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "571.01", "total": "2379.20"},
+        {"line_number": "24", "description": "Parking fee Mahtra 5 / Mahtra 27", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "50.00", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "12.00", "total": "50.00"},
+        {"line_number": "25", "description": "Parking fee Mahtra 5 / Mahtra 27 success fee", "item_code": "1", "uom": "", "quantity": "1", "unit_price": "12.50", "discount": "", "discount_percentage": "", "tax_rate": "24", "tax_amount": "3.00", "total": "12.50"}
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {"tax_type": "VAT", "tax_name": "KM 0%", "tax_rate": "0", "tax_amount": "0.00"},
+        {"tax_type": "VAT", "tax_name": "KM 24%", "tax_rate": "24", "tax_amount": "25023.12"}
+      ],
+      "totals": {
+        "subtotal": "127564.34",
+        "total_tax_amount": "25023.12",
+        "gross_total": "152587.46",
+        "balance_due": "152587.46",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Estonian parking invoice with multi-rate KM (0% on 23,301.32 EUR and 24% on 104,263.02 EUR)"
+    }
+  ]
+}

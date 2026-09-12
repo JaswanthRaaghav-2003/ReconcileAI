@@ -1,0 +1,61 @@
+{
+  "file": "INV-32.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Invoice",
+      "invoice_number": "72",
+      "invoice_date": "06/05/2018",
+      "due_date": "06/19/2018",
+      "currency": "USD",
+      "supplier_name": "215B.E.A.R.S.",
+      "supplier_address": "4613 Conshohocken Avenue Philadelphia PA 19131",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "Amerihealthcaritas Transportation",
+      "buyer_address": "jblatt@amerihealthcaritas.com",
+      "payment_terms_text": "Terms: NET 14",
+      "po_number": "30193",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "5/31/18 1- 15 15 passenger van from Philly going to DC pick back up in DC coming back to to Philly",
+          "item_code": "",
+          "uom": "hr",
+          "quantity": "1",
+          "unit_price": "750.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "750.00"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "TAX 0%",
+          "tax_rate": "0",
+          "tax_amount": "0.00"
+        }
+      ],
+      "totals": {
+        "subtotal": "750.00",
+        "total_tax_amount": "0.00",
+        "gross_total": "750.00",
+        "balance_due": "750.00",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Passenger van transportation service (NET 14)"
+    }
+  ]
+}

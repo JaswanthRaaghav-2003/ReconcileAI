@@ -1,0 +1,61 @@
+{
+  "file": "DU-11.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Kreeditarve nr 6265-K",
+      "invoice_number": "6265-K",
+      "invoice_date": "16.03.2025",
+      "due_date": "16.03.2025",
+      "currency": "EUR",
+      "supplier_name": "Tavolo OÜ",
+      "supplier_address": "",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "Northwind Operations OÜ",
+      "buyer_address": "Rua do Ouro 15, 10134 Kesklinna, Tallinn, Harju maakond, Eesti",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Toitlustamine Tavolo",
+          "item_code": "",
+          "uom": "tk",
+          "quantity": "1",
+          "unit_price": "-327.87",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "22",
+          "tax_amount": "-72.13",
+          "total": "-327.87"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "KM 22%",
+          "tax_rate": "22",
+          "tax_amount": "-72.13"
+        }
+      ],
+      "totals": {
+        "subtotal": "-327.87",
+        "total_tax_amount": "-72.13",
+        "gross_total": "-400.00",
+        "balance_due": "-400.00",
+        "amount_credited": ""
+      },
+      "page_type": "CREDIT_MEMO",
+      "notes": "Kreeditarve arvele nr. 6265"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "file": "DU-05s.pdf",
+  "num_pages": 15,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Delivery note",
+      "invoice_number": "",
+      "invoice_date": "29.06.2026",
+      "due_date": "",
+      "currency": "",
+      "supplier_name": "Vantek Pte Ltd",
+      "supplier_address": "Market Road 7, #03-66/67/68/69, Singapore 737664, Singapore",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "Kingsley Services Inc",
+      "buyer_address": "Gartenweg 24, Laguna Technopark, Building C, 4024 BINAN-SPECIAL ZONE",
+      "payment_terms_text": "",
+      "po_number": "3057199",
+      "line_items": [
+        {
+          "line_number": "10",
+          "description": "F:WSA_10950635_HSS (N1) H3550 SLV",
+          "item_code": "4111401",
+          "uom": "PC",
+          "quantity": "100",
+          "unit_price": "",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": ""
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [],
+      "totals": {
+        "subtotal": "",
+        "total_tax_amount": "",
+        "gross_total": "",
+        "balance_due": "",
+        "amount_credited": ""
+      },
+      "page_type": "DELIVERY_NOTE",
+      "notes": "Delivery note / shipping slip (pages 1-12 delivery notes, pages 13-14 DHL waybills, page 15 shipment receipt)"
+    }
+  ]
+}

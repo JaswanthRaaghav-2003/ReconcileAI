@@ -1,0 +1,61 @@
+{
+  "file": "INV-34.pdf",
+  "num_pages": 3,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "tax invoice",
+      "invoice_number": "I220-127612",
+      "invoice_date": "20/06/2015",
+      "due_date": "27/06/2015",
+      "currency": "AUD",
+      "supplier_name": "Asian Pacific Serviced Offices Pty Ltd",
+      "supplier_address": "Level 3, 480 Collins Street, Melbourne VIC 3000",
+      "supplier_vat_id": "11068012653",
+      "supplier_bank_iban": "",
+      "buyer_name": "Zycus Infotech Private Limited",
+      "buyer_address": "Level 9, 440 Collins Street, Melbourne VIC 3000",
+      "payment_terms_text": "Due Date: 27/06/2015 (7 days)",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Workstation (Licence Fees - Suite 313b 20/06/2015 - 19/07/2015)",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "520.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "10",
+          "tax_amount": "52.00",
+          "total": "520.00"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "GST",
+          "tax_name": "GST 10%",
+          "tax_rate": "10",
+          "tax_amount": "52.00"
+        }
+      ],
+      "totals": {
+        "subtotal": "520.00",
+        "total_tax_amount": "52.00",
+        "gross_total": "572.00",
+        "balance_due": "572.00",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Australian GST invoice: $520.00 ex GST, $52.00 GST (10%), $572.00 Total inc GST"
+    }
+  ]
+}

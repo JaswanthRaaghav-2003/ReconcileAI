@@ -1,0 +1,59 @@
+{
+  "file": "INV-07.pdf",
+  "payables": [
+    {
+      "invoice_number": "INV7097292303",
+      "invoice_date": "2025-04-30",
+      "due_date": "2025-05-31",
+      "invoice_type": "INVOICE",
+      "currency": "ZAR",
+      "supplier": {
+        "name": "Larkspur Distribution Meridian Print",
+        "supplier_id": "",
+        "address": "Gartenweg 173, F04, Kiepersol House, Gauteng 2195, South Africa",
+        "vat_id": ""
+      },
+      "buyer": {
+        "company_code": "BOLTGROUP",
+        "business_unit_code": "ZA001",
+        "location_code": "LOC_ZA_001"
+      },
+      "payment_term_id": "",
+      "po_number": "",
+      "po_id": "",
+      "gross_total": "19730.55",
+      "subtotal": "17157.00",
+      "total_tax_amount": "2573.55",
+      "discount_amount": "",
+      "freight_charges": "",
+      "insurance_charges": "",
+      "extra_charges": "",
+      "excise_duties": "",
+      "taxes": [],
+      "line_items": [
+        {
+          "description": "Standard Criminal Verification",
+          "item_type": "SERVICE",
+          "uom": "",
+          "quantity": "133",
+          "unit_price": "129.00",
+          "total": "17157.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "15",
+          "tax_amount": "2573.55",
+          "taxes": [
+            {
+              "tax_type": "VAT",
+              "tax_name": "VAT 15%",
+              "tax_rate": "15",
+              "tax_amount": "2573.55",
+              "tax_type_code": "ZAF_150_VAT"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "declined": []
+}

@@ -1,0 +1,74 @@
+{
+  "file": "INV-09.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "ARVE",
+      "invoice_number": "11768395",
+      "invoice_date": "2025/06/06",
+      "due_date": "2025/06/27",
+      "currency": "EUR",
+      "supplier_name": "Cloverdale Trading",
+      "supplier_address": "10112, Gartenweg 13, Harju county, ESTONIA",
+      "supplier_vat_id": "EE418070965",
+      "supplier_bank_iban": "EE516678092588562155",
+      "buyer_name": "Northwind Operations OÜ",
+      "buyer_address": "Lindenstrasse 15, EE-10134 TALLINN",
+      "payment_terms_text": "Maksetähtaeg Due Date 2025/06/27 (21 days)",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "752",
+          "description": "Import duties",
+          "item_code": "752",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "31889.09",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "31889.09"
+        },
+        {
+          "line_number": "751",
+          "description": "Customs VAT",
+          "item_code": "751",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "5878.23",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "5878.23"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "Käibemaks VAT amount",
+          "tax_rate": "0",
+          "tax_amount": "0.00"
+        }
+      ],
+      "totals": {
+        "subtotal": "37767.32",
+        "total_tax_amount": "0.00",
+        "gross_total": "37767.32",
+        "balance_due": "37767.32",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Customs clearance disbursement invoice: Import duties 31,889.09 EUR + Customs VAT 5,878.23 EUR = 37,767.32 EUR (page 2 is customs declaration)"
+    }
+  ]
+}

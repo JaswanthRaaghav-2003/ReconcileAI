@@ -1,0 +1,54 @@
+{
+  "file": "INV-21.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "FATURA",
+      "invoice_number": "9884313366",
+      "invoice_date": "06/04/2026",
+      "due_date": "06/05/2026",
+      "currency": "EUR",
+      "supplier_name": "Oakhaven Partners LDA",
+      "supplier_address": "High Street 8, 2799-554 LINDA-A-VELHA",
+      "supplier_vat_id": "PT059909082",
+      "supplier_bank_iban": "PT76698391551688438577388",
+      "buyer_name": "Northwind SUPPORT SERVICES PT, UNIPESSOAL LDA",
+      "buyer_address": "Avenida Central 224, 1250-148 Lisboa",
+      "payment_terms_text": "DATA DE VENCIMENTO 06/05/2026 (30 days)",
+      "po_number": "FT0U368444",
+      "line_items": [
+        {"line_number": "1", "description": "SICAL SUPER BAR Cafe Grao 6x1kg N1PT", "item_code": "12422850", "uom": "UND", "quantity": "24", "unit_price": "34.69", "discount": "", "discount_percentage": "51.00", "tax_rate": "23", "tax_amount": "93.83", "total": "407.95"},
+        {"line_number": "2", "description": "Desconto em Valor BEVERAGES SOLUTIONS", "item_code": "", "uom": "", "quantity": "1", "unit_price": "-8.30", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "-1.91", "total": "-8.30"},
+        {"line_number": "3", "description": "Chocolate Quente 12(25x20g) N1", "item_code": "12616271", "uom": "UND", "quantity": "1", "unit_price": "10.01", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "2.30", "total": "10.01"},
+        {"line_number": "4", "description": "NESCAFE Acucar Std 1x2.8kg PT", "item_code": "12624778", "uom": "UND", "quantity": "1", "unit_price": "8.30", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "1.91", "total": "8.30"},
+        {"line_number": "5", "description": "AHMAD Inf MentaHrtLim 6(20x1.5g)N1PT", "item_code": "14181244", "uom": "UND", "quantity": "3", "unit_price": "2.94", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "2.03", "total": "8.82"},
+        {"line_number": "6", "description": "AHMAD Inf Camomila 6(20x1.5g)N1PT", "item_code": "14186288", "uom": "UND", "quantity": "3", "unit_price": "2.94", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "2.03", "total": "8.82"}
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "IVA",
+          "tax_name": "IVA 23%",
+          "tax_rate": "23",
+          "tax_amount": "100.19"
+        }
+      ],
+      "totals": {
+        "subtotal": "435.60",
+        "total_tax_amount": "100.19",
+        "gross_total": "535.79",
+        "balance_due": "535.79",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Portuguese coffee supplies: Net base 435.60 EUR + 23% IVA 100.19 EUR = 535.79 EUR"
+    }
+  ]
+}

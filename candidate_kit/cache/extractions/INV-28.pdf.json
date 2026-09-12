@@ -1,0 +1,63 @@
+{
+  "file": "INV-28.pdf",
+  "num_pages": 3,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "AFREGNINGSBILAG Faktura",
+      "invoice_number": "3025139",
+      "invoice_date": "28-02-26",
+      "due_date": "30-03-26",
+      "currency": "DKK",
+      "supplier_name": "Silverbrook Print",
+      "supplier_address": "Rua do Ouro 40, 2605 Brøndby",
+      "supplier_vat_id": "DK74347584",
+      "supplier_bank_iban": "0000003025139",
+      "buyer_name": "Northwind Services Dk Aps",
+      "buyer_address": "Lindenstrasse 3, 2610 Rødovre Danmark",
+      "payment_terms_text": "Forfaldsdato 30-03-26 (30 days)",
+      "po_number": "",
+      "line_items": [
+        {"line_number": "1", "description": "Bølgepap", "item_code": "", "uom": "KG", "quantity": "10", "unit_price": "0.521", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "1.30", "total": "5.21"},
+        {"line_number": "2", "description": "Lithium-ion bat. Lowgrade", "item_code": "", "uom": "KG", "quantity": "35", "unit_price": "32.42714", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "283.74", "total": "1134.95"},
+        {"line_number": "3", "description": "Træ, Klasse A2", "item_code": "", "uom": "KG", "quantity": "100", "unit_price": "2.632", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "65.80", "total": "263.20"},
+        {"line_number": "4", "description": "Transport 1. enhed liftbil", "item_code": "", "uom": "STK", "quantity": "1", "unit_price": "513.00", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "128.25", "total": "513.00"},
+        {"line_number": "5", "description": "Tømning 660L minicontainer", "item_code": "", "uom": "STK", "quantity": "1", "unit_price": "172.00", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "43.00", "total": "172.00"},
+        {"line_number": "6", "description": "Oparbejdning papir / pap", "item_code": "", "uom": "KG", "quantity": "10", "unit_price": "0.69", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "1.73", "total": "6.90"},
+        {"line_number": "7", "description": "Vermiculite, 100 L, salg", "item_code": "", "uom": "STK", "quantity": "1", "unit_price": "355.19", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "88.80", "total": "355.19"},
+        {"line_number": "8", "description": "Vejbenyttelsesafgift", "item_code": "", "uom": "STK", "quantity": "1", "unit_price": "65.25", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "16.31", "total": "65.25"},
+        {"line_number": "9", "description": "Miljøindberetning", "item_code": "", "uom": "STK", "quantity": "1", "unit_price": "119.00", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "29.75", "total": "119.00"},
+        {"line_number": "10", "description": "Fakturaadministration", "item_code": "", "uom": "STK", "quantity": "1", "unit_price": "200.00", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "50.00", "total": "200.00"},
+        {"line_number": "11", "description": "Leje minicont. 660 ltr. m/lås", "item_code": "", "uom": "STK", "quantity": "1", "unit_price": "120.00", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "30.00", "total": "120.00"},
+        {"line_number": "12", "description": "Leje minicont. 240 ltr.", "item_code": "", "uom": "STK", "quantity": "3", "unit_price": "60.00", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "45.00", "total": "180.00"},
+        {"line_number": "13", "description": "Leje - Plastfad, 120 ltr.", "item_code": "", "uom": "STK", "quantity": "1", "unit_price": "156.86", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "39.22", "total": "156.86"},
+        {"line_number": "14", "description": "Leje minicont. 660 ltr.", "item_code": "", "uom": "STK", "quantity": "2", "unit_price": "112.00", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "56.00", "total": "224.00"},
+        {"line_number": "15", "description": "Leje Plast stativer", "item_code": "", "uom": "STK", "quantity": "1", "unit_price": "67.00", "discount": "", "discount_percentage": "", "tax_rate": "25", "tax_amount": "16.75", "total": "67.00"}
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "25% moms",
+          "tax_rate": "25",
+          "tax_amount": "895.64"
+        }
+      ],
+      "totals": {
+        "subtotal": "3582.56",
+        "total_tax_amount": "895.64",
+        "gross_total": "4478.20",
+        "balance_due": "4478.20",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Danish waste disposal invoice: 3,582.56 DKK net + 25% moms 895.64 DKK = 4,478.20 DKK (pages 2-3 are specification)"
+    }
+  ]
+}

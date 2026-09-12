@@ -1,0 +1,178 @@
+{
+  "file": "DU-03.pdf",
+  "num_pages": 12,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "TAX INVOICE",
+      "invoice_number": "0107892268",
+      "invoice_date": "17.Nov.2025",
+      "due_date": "16.Jan.2026",
+      "currency": "USD",
+      "supplier_name": "Blueharbor Logistics & Services Singapore Pte. Ltd.",
+      "supplier_address": "Changi Airfreight Centre, Cargo Agents Building E, 819834 Singapore",
+      "supplier_vat_id": "M2-0029161-1",
+      "supplier_bank_iban": "",
+      "buyer_name": "Cadence PTE. LTD.",
+      "buyer_address": "Jalan Ampang 08, 539775 Singapore",
+      "payment_terms_text": "60 Days Net",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "International Freight",
+          "item_code": "",
+          "uom": "KG",
+          "quantity": "567",
+          "unit_price": "1.28",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "725.76"
+        },
+        {
+          "line_number": "2",
+          "description": "Origin Terminal Handling",
+          "item_code": "",
+          "uom": "KG",
+          "quantity": "567",
+          "unit_price": "0.10",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "56.70"
+        },
+        {
+          "line_number": "3",
+          "description": "Documentation Fee",
+          "item_code": "",
+          "uom": "EA",
+          "quantity": "1",
+          "unit_price": "45.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "45.00"
+        },
+        {
+          "line_number": "4",
+          "description": "Delivery",
+          "item_code": "",
+          "uom": "KG",
+          "quantity": "567",
+          "unit_price": "0.04",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "22.68"
+        },
+        {
+          "line_number": "5",
+          "description": "Pick-up",
+          "item_code": "",
+          "uom": "KG",
+          "quantity": "567",
+          "unit_price": "0.18",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "102.06"
+        },
+        {
+          "line_number": "6",
+          "description": "Customs Export",
+          "item_code": "",
+          "uom": "EA",
+          "quantity": "1",
+          "unit_price": "7.50",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "7.50"
+        },
+        {
+          "line_number": "7",
+          "description": "Origin Documentation",
+          "item_code": "",
+          "uom": "EA",
+          "quantity": "1",
+          "unit_price": "15.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "15.00"
+        },
+        {
+          "line_number": "8",
+          "description": "Customs Import",
+          "item_code": "",
+          "uom": "EA",
+          "quantity": "1",
+          "unit_price": "15.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "15.00"
+        },
+        {
+          "line_number": "9",
+          "description": "Carrier Manifest Filing",
+          "item_code": "",
+          "uom": "EA",
+          "quantity": "1",
+          "unit_price": "5.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "5.00"
+        },
+        {
+          "line_number": "10",
+          "description": "Terminal Handling",
+          "item_code": "",
+          "uom": "KG",
+          "quantity": "567",
+          "unit_price": "0.08",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "45.36"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "GST",
+          "tax_name": "0% GST on sales",
+          "tax_rate": "0",
+          "tax_amount": "0.00"
+        }
+      ],
+      "totals": {
+        "subtotal": "1040.06",
+        "total_tax_amount": "0.00",
+        "gross_total": "1040.06",
+        "balance_due": "1040.06",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Pages 3-12 contain supporting shipping advice, cargo permits, and airway bill copies"
+    }
+  ]
+}

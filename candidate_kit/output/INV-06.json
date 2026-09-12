@@ -1,0 +1,59 @@
+{
+  "file": "INV-06.pdf",
+  "payables": [
+    {
+      "invoice_number": "8527907727",
+      "invoice_date": "2025-04-07",
+      "due_date": "",
+      "invoice_type": "INVOICE",
+      "currency": "ZAR",
+      "supplier": {
+        "name": "Oakhaven Trading",
+        "supplier_id": "",
+        "address": "Jalan Ampang 23087",
+        "vat_id": "5471258869"
+      },
+      "buyer": {
+        "company_code": "BOLTGROUP",
+        "business_unit_code": "ZA001",
+        "location_code": "LOC_ZA_001"
+      },
+      "payment_term_id": "",
+      "po_number": "75884754",
+      "po_id": "",
+      "gross_total": "1683.98",
+      "subtotal": "1464.15",
+      "total_tax_amount": "169.83",
+      "discount_amount": "",
+      "freight_charges": "50.00",
+      "insurance_charges": "",
+      "extra_charges": "",
+      "excise_duties": "",
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "VAT Amount",
+          "tax_rate": "15",
+          "tax_amount": "169.83",
+          "tax_type_code": "ZAF_150_VAT"
+        }
+      ],
+      "line_items": [
+        {
+          "description": "Grocery Items Subtotal (Net)",
+          "item_type": "SERVICE",
+          "uom": "LOT",
+          "quantity": "1",
+          "unit_price": "1464.15",
+          "total": "1464.15",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "taxes": []
+        }
+      ]
+    }
+  ],
+  "declined": []
+}

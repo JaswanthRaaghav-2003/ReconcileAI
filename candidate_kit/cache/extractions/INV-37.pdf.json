@@ -1,0 +1,87 @@
+{
+  "file": "INV-37.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "UTILITIES REIMBURSEMENT",
+      "invoice_number": "5568",
+      "invoice_date": "6/12/2018",
+      "due_date": "",
+      "currency": "USD",
+      "supplier_name": "1120 VERMONT AVENUE ASSOCIATES, LLP",
+      "supplier_address": "",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "AmeriHealth",
+      "buyer_address": "200 Stevens Drive Philadelphia, PA 19113",
+      "payment_terms_text": "",
+      "po_number": "17816",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "ELECTRIC USAGE (Sub-total electrical costs)",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "1836.47",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "5.75",
+          "tax_amount": "105.60",
+          "total": "1836.47"
+        },
+        {
+          "line_number": "2",
+          "description": "COOLING SYSTEM CONDENSER WATER USAGE (Sub-total condenser water costs)",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "416.65",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "416.65"
+        },
+        {
+          "line_number": "3",
+          "description": "BUILDING SERVICE FEES",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "122.00",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "5.75",
+          "tax_amount": "7.02",
+          "total": "122.00"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "Sales tax on utility and building services",
+          "tax_rate": "5.75",
+          "tax_amount": "112.62"
+        }
+      ],
+      "totals": {
+        "subtotal": "2375.12",
+        "total_tax_amount": "112.62",
+        "gross_total": "2487.74",
+        "balance_due": "2487.74",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Utilities reimbursement: $1836.47 electric net + $416.65 condenser + $122.00 building fees + $112.62 sales tax (0.0575) = $2487.74"
+    }
+  ]
+}

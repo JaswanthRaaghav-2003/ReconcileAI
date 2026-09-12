@@ -1,0 +1,74 @@
+{
+  "file": "INV-10.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Arve",
+      "invoice_number": "18533",
+      "invoice_date": "25.03.2026",
+      "due_date": "24.04.2026",
+      "currency": "EUR",
+      "supplier_name": "Larkspur Print OÜ",
+      "supplier_address": "Jalan Ampang 60, Tallinn, Harju maakond 10412",
+      "supplier_vat_id": "EE755780626",
+      "supplier_bank_iban": "EE684837406967098266",
+      "buyer_name": "Northwind Operations OÜ",
+      "buyer_address": "Rua do Ouro 15, Tallinn, Harju maakond 10134",
+      "payment_terms_text": "Tingimused: 30 pv neto; Tähtaeg: 24.04.2026",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "17/03 Toitlustus",
+          "item_code": "001",
+          "uom": "kord",
+          "quantity": "1",
+          "unit_price": "479.28",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "479.28"
+        },
+        {
+          "line_number": "2",
+          "description": "Ümardus",
+          "item_code": "YM",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "-0.01",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "-0.01"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "Käibemaks 24%",
+          "tax_rate": "24",
+          "tax_amount": "115.03"
+        }
+      ],
+      "totals": {
+        "subtotal": "479.27",
+        "total_tax_amount": "115.03",
+        "gross_total": "594.30",
+        "balance_due": "594.30",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Estonian catering invoice: 479.28 - 0.01 rounding = 479.27 net, 24% VAT 115.03, total 594.30 EUR"
+    }
+  ]
+}

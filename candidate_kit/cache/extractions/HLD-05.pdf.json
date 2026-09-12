@@ -1,0 +1,57 @@
+{
+  "file": "HLD-05.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Factura",
+      "invoice_number": "856/AT",
+      "invoice_date": "12/06/2026",
+      "due_date": "",
+      "currency": "EUR",
+      "supplier_name": "Distribeer Bebidas Lda",
+      "supplier_address": "Rua do Ouro 138, 4300 Lisboa",
+      "supplier_vat_id": "PT502345678",
+      "supplier_bank_iban": "PT21153921403828568834522",
+      "buyer_name": "Northwind Support Services PT Unipessoal, Lda",
+      "buyer_address": "Parnu mnt 224, 1500-510 Lisboa Portugal",
+      "payment_terms_text": "",
+      "po_number": "",
+      "line_items": [
+        {"line_number": "1", "description": "SAGRES Branca Gfa Tab 6x1L PT", "item_code": "1279010", "uom": "TAB", "quantity": "40", "unit_price": "7.93775", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "73.03", "total": "317.51"},
+        {"line_number": "2", "description": "HEINEKEN Barril OW 5L PT", "item_code": "1080009", "uom": "BAR", "quantity": "6", "unit_price": "10.71833", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "14.79", "total": "64.31"},
+        {"line_number": "3", "description": "SAGRES Branca Gfa Tab 4(6x25cl) PT 201a", "item_code": "1270001", "uom": "TAB", "quantity": "1", "unit_price": "10.27", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "2.36", "total": "10.27"},
+        {"line_number": "4", "description": "SAGRES Branca Gfa Cxa 20x25cl PT 201a", "item_code": "1170003", "uom": "CRT", "quantity": "9", "unit_price": "7.97222", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "16.50", "total": "71.75"},
+        {"line_number": "5", "description": "CASTELLO Original Gfa SW 4(6x25cl) 404a", "item_code": "1405109", "uom": "PAK", "quantity": "7", "unit_price": "8.05143", "discount": "", "discount_percentage": "", "tax_rate": "13", "tax_amount": "7.33", "total": "56.36"},
+        {"line_number": "6", "description": "LUSO PET SW 6x1,5L SDR", "item_code": "1402053", "uom": "PAK", "quantity": "27", "unit_price": "2.34444", "discount": "", "discount_percentage": "", "tax_rate": "13", "tax_amount": "8.23", "total": "63.30"},
+        {"line_number": "7", "description": "Depósito SDR", "item_code": "", "uom": "UND", "quantity": "162", "unit_price": "0.10", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "16.20"},
+        {"line_number": "8", "description": "LUSO PET SW 4(6x50cl) SDR", "item_code": "1400113", "uom": "PAK", "quantity": "4", "unit_price": "8.1925", "discount": "", "discount_percentage": "", "tax_rate": "13", "tax_amount": "4.26", "total": "32.77"},
+        {"line_number": "9", "description": "Depósito SDR", "item_code": "", "uom": "UND", "quantity": "96", "unit_price": "0.10", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "9.60"},
+        {"line_number": "10", "description": "DEC VAKUGZK Gfa Cxa 4(6x33cl) ES", "item_code": "1100143", "uom": "CRT", "quantity": "1", "unit_price": "23.51", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "5.41", "total": "23.51"},
+        {"line_number": "11", "description": "HEINEKEN Gfa Cxa 18x25cl PT", "item_code": "1130003", "uom": "CRT", "quantity": "4", "unit_price": "9.1125", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "8.38", "total": "36.45"},
+        {"line_number": "12", "description": "HEINEKEN Gfa Tab 4(6x25cl) PT", "item_code": "1230000", "uom": "TAB", "quantity": "7", "unit_price": "12.94857", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "20.85", "total": "90.64"},
+        {"line_number": "13", "description": "SAGRES Branca Gfa SW 2(10x25cl) PT 201a", "item_code": "1470000", "uom": "PAK", "quantity": "8", "unit_price": "8.55", "discount": "", "discount_percentage": "", "tax_rate": "23", "tax_amount": "15.73", "total": "68.40"}
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {"tax_type": "IVA", "tax_name": "IVA 13%", "tax_rate": "13", "tax_amount": "19.82"},
+        {"tax_type": "IVA", "tax_name": "IVA 23%", "tax_rate": "23", "tax_amount": "157.05"}
+      ],
+      "totals": {
+        "subtotal": "1012.14",
+        "total_tax_amount": "176.87",
+        "gross_total": "1037.94",
+        "balance_due": "1037.94",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Pages 1-2 contain multi-rate IVA (13% and 23%) and deposit lines"
+    }
+  ]
+}

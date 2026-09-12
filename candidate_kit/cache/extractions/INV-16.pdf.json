@@ -1,0 +1,61 @@
+{
+  "file": "INV-16.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Arve",
+      "invoice_number": "TLLIR72836045",
+      "invoice_date": "09-06-25",
+      "due_date": "07-07-25",
+      "currency": "EUR",
+      "supplier_name": "Speedwell Express Estonia AS",
+      "supplier_address": "Bahnhofstrasse 32, 11415 Tallinn, ESTONIA",
+      "supplier_vat_id": "EE445462205",
+      "supplier_bank_iban": "EE989745485604538087",
+      "buyer_name": "Northwind Operations OÜ",
+      "buyer_address": "VANA-LÕUNA TN 15, 10134 TALLINN, ESTONIA",
+      "payment_terms_text": "Maksetähtaeg: 07-07-25 (28 days)",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "ECONOMY SELECT (Transporditasu 18.87 + Fuel surcharge 2.83)",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "21.70",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "22",
+          "tax_amount": "4.77",
+          "total": "21.70"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "KM määr 22,00%",
+          "tax_rate": "22",
+          "tax_amount": "4.77"
+        }
+      ],
+      "totals": {
+        "subtotal": "21.70",
+        "total_tax_amount": "4.77",
+        "gross_total": "26.47",
+        "balance_due": "26.47",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Estonian logistics: 21.70 EUR net @ 22% KM (4.77 EUR) = 26.47 EUR (page 2 is waybill detail)"
+    }
+  ]
+}

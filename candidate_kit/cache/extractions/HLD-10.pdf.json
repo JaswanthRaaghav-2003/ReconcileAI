@@ -1,0 +1,80 @@
+{
+  "file": "HLD-10.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Arve",
+      "invoice_number": "27044945",
+      "invoice_date": "07-05-26",
+      "due_date": "04-06-26",
+      "currency": "EUR",
+      "supplier_name": "Speedwell AS",
+      "supplier_address": "High Street 30, 75310 Harju maakond, Eesti",
+      "supplier_vat_id": "EE10788760",
+      "supplier_bank_iban": "",
+      "buyer_name": "Northwind Operations OÜ",
+      "buyer_address": "10134",
+      "payment_terms_text": "Maksetähtaeg: 04-06-26",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Standard Transport Kood B (0% KM)",
+          "item_code": "B",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "96.73",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "0",
+          "tax_amount": "0.00",
+          "total": "96.73"
+        },
+        {
+          "line_number": "2",
+          "description": "Standard Transport Kood A (24% KM)",
+          "item_code": "A",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "127.25",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "24",
+          "tax_amount": "30.54",
+          "total": "127.25"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "KM 24%",
+          "tax_rate": "24",
+          "tax_amount": "30.54"
+        },
+        {
+          "tax_type": "VAT",
+          "tax_name": "KM 0%",
+          "tax_rate": "0",
+          "tax_amount": "0.00"
+        }
+      ],
+      "totals": {
+        "subtotal": "223.98",
+        "total_tax_amount": "30.54",
+        "gross_total": "254.52",
+        "balance_due": "254.52",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Estonian logistics invoice: 127.25 EUR taxable @ 24% KM (30.54 EUR), 96.73 EUR exempt @ 0% KM (0.00 EUR)"
+    }
+  ]
+}

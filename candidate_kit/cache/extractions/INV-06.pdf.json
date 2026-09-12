@@ -1,0 +1,61 @@
+{
+  "file": "INV-06.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Tax Invoice",
+      "invoice_number": "8527907727",
+      "invoice_date": "07/04/2025",
+      "due_date": "",
+      "currency": "ZAR",
+      "supplier_name": "Oakhaven Trading",
+      "supplier_address": "Jalan Ampang 23087",
+      "supplier_vat_id": "5471258869",
+      "supplier_bank_iban": "4026863135",
+      "buyer_name": "Northwind Services ZA (Pty) Ltd",
+      "buyer_address": "Unit 7 Block B, M5 Office Park, Maitland Cape Town 7405",
+      "payment_terms_text": "",
+      "po_number": "75884754",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Grocery Items Subtotal (Net)",
+          "item_code": "",
+          "uom": "LOT",
+          "quantity": "1",
+          "unit_price": "1464.15",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "1464.15"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "50.00",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "VAT Amount",
+          "tax_rate": "15",
+          "tax_amount": "169.83"
+        }
+      ],
+      "totals": {
+        "subtotal": "1464.15",
+        "total_tax_amount": "169.83",
+        "gross_total": "1683.98",
+        "balance_due": "1683.98",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Online grocery order: Net goods 1464.15 ZAR + 50.00 ZAR delivery + 169.83 ZAR VAT = 1,683.98 ZAR"
+    }
+  ]
+}

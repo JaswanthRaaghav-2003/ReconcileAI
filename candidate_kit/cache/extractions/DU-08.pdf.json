@@ -1,0 +1,40 @@
+{
+  "file": "DU-08.pdf",
+  "num_pages": 1,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Mahnung",
+      "invoice_number": "",
+      "invoice_date": "04.06.2025",
+      "due_date": "10.06.2025",
+      "currency": "EUR",
+      "supplier_name": "Silverbrook Media GmbH & Co.KG",
+      "supplier_address": "",
+      "supplier_vat_id": "DE6583397329",
+      "supplier_bank_iban": "DE47322122828473622394",
+      "buyer_name": "Northwind Services DE GmbH",
+      "buyer_address": "Karl-Liebknecht-Str. 29, 10178 Berlin, Deutschland",
+      "payment_terms_text": "Zahlungsausgleich bis zum 10.06.2025",
+      "po_number": "",
+      "line_items": [],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [],
+      "totals": {
+        "subtotal": "",
+        "total_tax_amount": "",
+        "gross_total": "4.10",
+        "balance_due": "4.10",
+        "amount_credited": "-44.84"
+      },
+      "page_type": "DUNNING_REMINDER",
+      "notes": "Dunning reminder letter (Mahnung) for overdue invoice VRB700A6126940 less credited amount from canceled invoice VRB519A2890964"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "file": "INV-31.pdf",
+  "num_pages": 3,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "INVOICE",
+      "invoice_number": "39015",
+      "invoice_date": "6/1/2018",
+      "due_date": "6/1/2018",
+      "currency": "USD",
+      "supplier_name": "100 Airport KPG III, LLC.",
+      "supplier_address": "125 E Elm Street, Suite 400, Conshohocken, PA 19428",
+      "supplier_vat_id": "",
+      "supplier_bank_iban": "",
+      "buyer_name": "AmeriHealth Caritas",
+      "buyer_address": "200 Stevens Drive, Suite 100, Lester, PA 19113",
+      "payment_terms_text": "Please pay by due date to avoid late charges.",
+      "po_number": "16299",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "Electric 04/27/18-05/16/18",
+          "item_code": "",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "17657.53",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "",
+          "tax_amount": "",
+          "total": "17657.53"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [],
+      "totals": {
+        "subtotal": "17657.53",
+        "total_tax_amount": "0.00",
+        "gross_total": "17657.53",
+        "balance_due": "17657.53",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Pages 2-3 are PECO utility bill backup"
+    }
+  ]
+}

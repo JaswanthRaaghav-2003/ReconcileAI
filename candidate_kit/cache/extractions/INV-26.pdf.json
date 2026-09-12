@@ -1,0 +1,82 @@
+{
+  "file": "INV-26.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "SALES",
+      "invoice_number": "SLS-080225",
+      "invoice_date": "08/02/2025",
+      "due_date": "",
+      "currency": "MYR",
+      "supplier_name": "Meridian Print Sdn Bhd",
+      "supplier_address": "47810 JAYA, Malaysia",
+      "supplier_vat_id": "W10-2001-32000042",
+      "supplier_bank_iban": "",
+      "buyer_name": "Mid Valley City, Lingkaran Syed Putra",
+      "buyer_address": "59200 Kuala Lumpur, Malaysia",
+      "payment_terms_text": "Payment Terms: Instant Transfer",
+      "po_number": "",
+      "line_items": [
+        {"line_number": "1", "description": "WIPES", "item_code": "", "uom": "", "quantity": "2", "unit_price": "14.20", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "28.40"},
+        {"line_number": "2", "description": "SX90S", "item_code": "", "uom": "", "quantity": "2", "unit_price": "10.95", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "21.90"},
+        {"line_number": "3", "description": "PEEL FRESH MANGO 1L", "item_code": "", "uom": "", "quantity": "2", "unit_price": "6.90", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "13.80"},
+        {"line_number": "4", "description": "NOI MIXED ROOT CHIPS 65G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "3.60", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "7.20"},
+        {"line_number": "5", "description": "POP SWEET N SALTY 120G", "item_code": "", "uom": "", "quantity": "4", "unit_price": "15.90", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "63.60"},
+        {"line_number": "6", "description": "(+/-1KG)", "item_code": "", "uom": "", "quantity": "1", "unit_price": "7.20", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "7.20"},
+        {"line_number": "7", "description": "CHINA SHINE GRAPE 500G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "11.80", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "23.60"},
+        {"line_number": "8", "description": "CHIPS SALT N 142G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "15.50", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "31.00"},
+        {"line_number": "9", "description": "TONG NUT MIX HONEY 140GM", "item_code": "", "uom": "", "quantity": "2", "unit_price": "17.00", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "34.00"},
+        {"line_number": "10", "description": "150G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "12.20", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "24.40"},
+        {"line_number": "11", "description": "2F SHARE BAG 10X17G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "12.10", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "24.20"},
+        {"line_number": "12", "description": "BAR 138G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "15.20", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "30.40"},
+        {"line_number": "13", "description": "CREAM 300G", "item_code": "", "uom": "", "quantity": "1", "unit_price": "5.95", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "5.95"},
+        {"line_number": "14", "description": "CEO WHITE 500G", "item_code": "", "uom": "", "quantity": "1", "unit_price": "4.90", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "4.90"},
+        {"line_number": "15", "description": "DAIRY THICK & 150G", "item_code": "", "uom": "", "quantity": "6", "unit_price": "9.50", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "57.00"},
+        {"line_number": "16", "description": "CAFE OAT MILK 300G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "28.50", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "57.00"},
+        {"line_number": "17", "description": "GREEK FIT 160G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "12.60", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "25.20"},
+        {"line_number": "18", "description": "THINS CHIPS SOUR CREAM & 175G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "15.90", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "31.80"},
+        {"line_number": "19", "description": "Item 19", "item_code": "", "uom": "", "quantity": "2", "unit_price": "9.00", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "18.00"},
+        {"line_number": "20", "description": "GLICO PRETZ SWEET CORN 31G", "item_code": "", "uom": "", "quantity": "4", "unit_price": "2.00", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "8.00"},
+        {"line_number": "21", "description": "CAMPBELL'S INST WILD SOUP 3X16.8G", "item_code": "", "uom": "", "quantity": "6", "unit_price": "5.45", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "32.70"},
+        {"line_number": "22", "description": "PREGO MAC 71G", "item_code": "", "uom": "", "quantity": "5", "unit_price": "4.85", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "24.25"},
+        {"line_number": "23", "description": "LAYS CHIPS 170G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "14.60", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "29.20"},
+        {"line_number": "24", "description": "120G", "item_code": "", "uom": "", "quantity": "1", "unit_price": "10.50", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "10.50"},
+        {"line_number": "25", "description": "WHITE", "item_code": "", "uom": "", "quantity": "3", "unit_price": "21.90", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "65.70"},
+        {"line_number": "26", "description": "HONEY TEA 1150G", "item_code": "", "uom": "", "quantity": "1", "unit_price": "44.85", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "44.85"},
+        {"line_number": "27", "description": "ORG CHIA SEEDS 200G", "item_code": "", "uom": "", "quantity": "1", "unit_price": "19.90", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "19.90"},
+        {"line_number": "28", "description": "3IN1 GREEN TEA", "item_code": "", "uom": "", "quantity": "2", "unit_price": "12.60", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "25.20"},
+        {"line_number": "29", "description": "DRIED & 130G", "item_code": "", "uom": "", "quantity": "2", "unit_price": "6.60", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "13.20"},
+        {"line_number": "31", "description": "(BUY 2 @RM68.80) L 155", "item_code": "", "uom": "", "quantity": "1", "unit_price": "33.88", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "33.88"},
+        {"line_number": "32", "description": "GREEK FIT PASSIONFRUIT 160G", "item_code": "", "uom": "", "quantity": "1", "unit_price": "12.60", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "12.60"},
+        {"line_number": "33", "description": "GREEK FIT 160G", "item_code": "", "uom": "", "quantity": "1", "unit_price": "12.60", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "12.60"},
+        {"line_number": "34", "description": "BAG", "item_code": "", "uom": "", "quantity": "10", "unit_price": "0.20", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "2.00"},
+        {"line_number": "35", "description": "BAG", "item_code": "", "uom": "", "quantity": "4", "unit_price": "0.50", "discount": "", "discount_percentage": "", "tax_rate": "0", "tax_amount": "0.00", "total": "2.00"}
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "SST",
+          "tax_name": "SST 0%",
+          "tax_rate": "0",
+          "tax_amount": "0.00"
+        }
+      ],
+      "totals": {
+        "subtotal": "873.53",
+        "total_tax_amount": "0.00",
+        "gross_total": "873.53",
+        "balance_due": "873.53",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Malaysian retail supplies: 35 line items, 0% SST, total 873.53 MYR"
+    }
+  ]
+}

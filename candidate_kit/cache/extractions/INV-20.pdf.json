@@ -1,0 +1,61 @@
+{
+  "file": "INV-20.pdf",
+  "num_pages": 2,
+  "pages": [
+    {
+      "page_number": 1,
+      "document_title": "Invoice",
+      "invoice_number": "20423591",
+      "invoice_date": "16.02.2026",
+      "due_date": "08.03.2026",
+      "currency": "CHF",
+      "supplier_name": "Elektra AG",
+      "supplier_address": "Avenida Central 60, 8005 Zurich",
+      "supplier_vat_id": "CHE-726.894.719",
+      "supplier_bank_iban": "CH7030000001857721765",
+      "buyer_name": "Northwind CH sarl",
+      "buyer_address": "Market Road 26, 8008 Zurich, Switzerland",
+      "payment_terms_text": "Payment terms 20 Days net",
+      "po_number": "",
+      "line_items": [
+        {
+          "line_number": "1",
+          "description": "King Tony Cap 1/2 & quot Torx tip with T45x60mm hole",
+          "item_code": "35605506",
+          "uom": "",
+          "quantity": "1",
+          "unit_price": "11.19",
+          "discount": "",
+          "discount_percentage": "",
+          "tax_rate": "8.1",
+          "tax_amount": "0.91",
+          "total": "11.19"
+        }
+      ],
+      "charges_and_discounts": {
+        "discount_amount": "",
+        "freight_charges": "",
+        "insurance_charges": "",
+        "extra_charges": "",
+        "excise_duties": ""
+      },
+      "taxes": [
+        {
+          "tax_type": "VAT",
+          "tax_name": "VAT 8.10%",
+          "tax_rate": "8.1",
+          "tax_amount": "0.91"
+        }
+      ],
+      "totals": {
+        "subtotal": "11.19",
+        "total_tax_amount": "0.91",
+        "gross_total": "12.10",
+        "balance_due": "12.10",
+        "amount_credited": ""
+      },
+      "page_type": "INVOICE",
+      "notes": "Swiss CHF invoice: 11.19 CHF + 0.91 CHF (8.1% VAT) = 12.10 CHF (page 2 is QR-bill slip)"
+    }
+  ]
+}
