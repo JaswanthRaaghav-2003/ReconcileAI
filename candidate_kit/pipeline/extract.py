@@ -131,7 +131,7 @@ def call_vision_llm(image_bytes: bytes) -> Dict[str, Any]:
         import google.generativeai as genai
         from PIL import Image
         import io
-        genai.configure(api_key=gemini_key)
+        genai.configure(api_key=gemini_key, transport="rest")
         model = genai.GenerativeModel("gemini-1.5-pro")
         img = Image.open(io.BytesIO(image_bytes))
         resp = model.generate_content([EXTRACTION_PROMPT, img])

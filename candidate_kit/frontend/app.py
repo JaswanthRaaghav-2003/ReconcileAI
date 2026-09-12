@@ -324,25 +324,25 @@ def api_config():
 def api_test_key():
     data = request.get_json() or {}
     provider = data.get("provider", "gemini").lower()
-    key = data.get("key", "").strip()
+    key = data.get("key", "").strip(' "\'\r\n\t')
 
     if not key:
         env_key = os.environ.get("GEMINI_API_KEY") if provider == "gemini" else os.environ.get("OPENAI_API_KEY")
-        key = env_key or ""
+        key = (env_key or "").strip(' "\'\r\n\t')
 
     if not key:
-        return jsonify({"success": False, "message": "No API key provided or set in environment."}), 400
+        return jsonify({"success": False, "message": "No API key provided. Please enter a key in the input field."})
 
     try:
         if provider == "gemini":
             import google.generativeai as genai
-            genai.configure(api_key=key)
-            model = genai.GenerativeModel("gemini-1.5-pro")
-            # Minimal token count call to test authentication without generating tokens
+            genai.configure(api_key=key, transport="rest")
+            model = genai.GenerativeModel("gemini-1.5-flash")
+            # Minimal token count ping to test authentication
             count_res = model.count_tokens("Ping test connection.")
             return jsonify({
                 "success": True,
-                "message": f"Successfully authenticated with Gemini 1.5 Pro! (Token count response: {count_res.total_tokens})"
+                "message": f"Successfully authenticated with Gemini API! (Connection verified, token count: {count_res.total_tokens})"
             })
         elif provider == "openai":
             from openai import OpenAI
@@ -353,9 +353,19 @@ def api_test_key():
                 "message": "Successfully authenticated with OpenAI API!"
             })
         else:
-            return jsonify({"success": False, "message": f"Unknown provider: {provider}"}), 400
+            return jsonify({"success": False, "message": f"Unknown provider: {provider}"})
     except Exception as err:
-        return jsonify({"success": False, "message": f"Authentication failed: {str(err)}"}), 400
+        err_msg = str(err)
+        if "API key not valid" in err_msg or "API_KEY_INVALID" in err_msg:
+            clean = "API key not valid. Please verify your Google AI Studio API key at https://aistudio.google.com"
+        elif "PERMISSION_DENIED" in err_msg:
+            clean = "Permission denied. Check that your Google Cloud / AI Studio project has the Generative Language API enabled."
+        elif "RESOURCE_EXHAUSTED" in err_msg or "Quota exceeded" in err_msg:
+            clean = "Quota limit reached on this API key. Try again in a few moments or check your quota."
+        else:
+            clean = f"Authentication failed: {err_msg}"
+        return jsonify({"success": False, "message": clean})
+
 
 
 @app.route("/api/reprocess/<filename>", methods=["POST"])
