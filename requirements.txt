@@ -1,0 +1,6 @@
+Flask
+gunicorn
+PyMuPDF
+Pillow
+openai
+google-generativeai
